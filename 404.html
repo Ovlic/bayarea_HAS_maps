@@ -28,7 +28,11 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
             const currentPath = window.location.pathname;
-            const mapsPath = "/maps" + currentPath;
+            const lastSlashIndex = currentPath.lastIndexOf("/");
+            const pathSplit = currentPath.split("/");
+            // Add maps
+            pathSplit.splice(-1, 0, "maps");
+            const mapsPath = pathSplit.join("/");
             document.getElementById("maps-link").href = mapsPath;
         });
     </script>
