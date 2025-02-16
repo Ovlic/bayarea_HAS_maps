@@ -586,7 +586,10 @@
             "Red",
             "Yellow",
             "Blue",
-            "Green"
+            "Green",
+            "K",
+            "M",
+            "J"
         ],
         "operator": "BA"
     },
@@ -612,7 +615,12 @@
             "Red",
             "Yellow",
             "Blue",
-            "Green"
+            "Green",
+            "L",
+            "K",
+            "N",
+            "M",
+            "J"
         ],
         "operator": "BA"
     },
@@ -688,7 +696,12 @@
             "Red",
             "Yellow",
             "Blue",
-            "Green"
+            "Green",
+            "L",
+            "K",
+            "N",
+            "M",
+            "J"
         ],
         "operator": "BA"
     },
@@ -764,7 +777,12 @@
             "Red",
             "Yellow",
             "Blue",
-            "Green"
+            "Green",
+            "L",
+            "K",
+            "N",
+            "M",
+            "J"
         ],
         "operator": "BA"
     },
@@ -790,7 +808,12 @@
             "Red",
             "Yellow",
             "Blue",
-            "Green"
+            "Green",
+            "L",
+            "K",
+            "N",
+            "M",
+            "J"
         ],
         "operator": "BA"
     },

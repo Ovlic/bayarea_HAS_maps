@@ -33,7 +33,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "46th Ave & Taraval St",
+        "Name": "Taraval St & 46th Ave",
         "Location": {
             "Longitude": "-122.504534",
             "Latitude": "37.741685"
@@ -171,7 +171,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Forest Hill Station Outbound",
+        "Name": "Metro Forest Hill Station",
         "Location": {
             "Longitude": "-122.459192",
             "Latitude": "37.74817"
@@ -196,7 +196,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Metro Castro Station/Downtown",
+        "Name": "Metro Castro Station",
         "Location": {
             "Longitude": "-122.435231",
             "Latitude": "37.76262"
@@ -221,7 +221,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Metro Castro Station/Outbound",
+        "Name": "Metro Castro Station",
         "Location": {
             "Longitude": "-122.435289",
             "Latitude": "37.762683"
@@ -246,7 +246,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Metro Church Station/Downtown",
+        "Name": "Metro Church Station",
         "Location": {
             "Longitude": "-122.429168",
             "Latitude": "37.767194"
@@ -271,7 +271,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Metro Church Station/Outbound",
+        "Name": "Metro Church Station",
         "Location": {
             "Longitude": "-122.429321",
             "Latitude": "37.767327"
@@ -404,7 +404,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Metro Forest Hill Station/Downtown",
+        "Name": "Metro Forest Hill Station",
         "Location": {
             "Longitude": "-122.458623",
             "Latitude": "37.748351"
@@ -1122,7 +1122,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Ulloa St & Lenox Way",
+        "Name": "Ulloa St & West Portal/Lenox Ave",
         "Location": {
             "Longitude": "-122.466155",
             "Latitude": "37.741125"
@@ -1146,7 +1146,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Ulloa St & West Portal Ave",
+        "Name": "Ulloa St & West Portal/Lenox Ave",
         "Location": {
             "Longitude": "-122.466167",
             "Latitude": "37.741009"
@@ -1390,7 +1390,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Embarcadero & Sansome St",
+        "Name": "The Embarcadero & Sansome St",
         "Location": {
             "Longitude": "-122.403233",
             "Latitude": "37.805146"
@@ -1486,7 +1486,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Market St & 1st St",
+        "Name": "Market St & Battery/1st St",
         "Location": {
             "Longitude": "-122.399195",
             "Latitude": "37.79094"
@@ -1534,7 +1534,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Market St & 3rd St",
+        "Name": "Market St & Kearny/3rd St",
         "Location": {
             "Longitude": "-122.403519",
             "Latitude": "37.787525"
@@ -1558,7 +1558,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Market St & 4th St",
+        "Name": "Market St & Stockton/4th St",
         "Location": {
             "Longitude": "-122.405847",
             "Latitude": "37.785705"
@@ -1606,7 +1606,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Market St & 5th  St",
+        "Name": "Market St & 5th St",
         "Location": {
             "Longitude": "-122.407992",
             "Latitude": "37.784082"
@@ -1630,7 +1630,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Market St & 6th St",
+        "Name": "Market St & Taylor/6th St",
         "Location": {
             "Longitude": "-122.4104",
             "Latitude": "37.782102"
@@ -1702,7 +1702,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Market St & 8th St",
+        "Name": "Market St & Hyde/8th St",
         "Location": {
             "Longitude": "-122.414826",
             "Latitude": "37.778606"
@@ -1726,7 +1726,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Market St & 9th St",
+        "Name": "Market St & Larkin/9th St",
         "Location": {
             "Longitude": "-122.41634",
             "Latitude": "37.77741"
@@ -1750,7 +1750,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Market St & Battery St",
+        "Name": "Market St & Battery/1st St",
         "Location": {
             "Longitude": "-122.399069",
             "Latitude": "37.79111"
@@ -1870,7 +1870,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Market St & Drumm St",
+        "Name": "Market St & Main/Drumm St",
         "Location": {
             "Longitude": "-122.396178",
             "Latitude": "37.793473"
@@ -1942,7 +1942,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Market St & Guerrero St",
+        "Name": "Market St & Laguna/Guerrero St",
         "Location": {
             "Longitude": "-122.424971",
             "Latitude": "37.77057"
@@ -1966,7 +1966,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Market St & Hyde St",
+        "Name": "Market St & Hyde/8th St",
         "Location": {
             "Longitude": "-122.414379",
             "Latitude": "37.779105"
@@ -1990,7 +1990,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Market St & Kearny St",
+        "Name": "Market St & Kearny/3rd St",
         "Location": {
             "Longitude": "-122.40337",
             "Latitude": "37.78773"
@@ -2014,7 +2014,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Market St & Laguna St",
+        "Name": "Market St & Laguna/Guerrero St",
         "Location": {
             "Longitude": "-122.424666",
             "Latitude": "37.770953"
@@ -2038,7 +2038,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Market St & Larkin St",
+        "Name": "Market St & Larkin/9th St",
         "Location": {
             "Longitude": "-122.416236",
             "Latitude": "37.777598"
@@ -2062,7 +2062,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Market St & Main St",
+        "Name": "Market St & Main/Drumm St",
         "Location": {
             "Longitude": "-122.396627",
             "Latitude": "37.792984"
@@ -2205,7 +2205,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Market St & South Van Ness Ave",
+        "Name": "Market St & Van Ness Ave",
         "Location": {
             "Longitude": "-122.419321",
             "Latitude": "37.775056"
@@ -2229,7 +2229,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Market St & Stockton St",
+        "Name": "Market St & Stockton/4th St",
         "Location": {
             "Longitude": "-122.405859",
             "Latitude": "37.785777"
@@ -2253,7 +2253,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Market St & Taylor St",
+        "Name": "Market St & Taylor/6th St",
         "Location": {
             "Longitude": "-122.410228",
             "Latitude": "37.782316"
@@ -3858,7 +3858,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Ocean Ave & Dorado Ter",
+        "Name": "Ocean Ave & Jules Ave/Dorado Ter",
         "Location": {
             "Longitude": "-122.461059",
             "Latitude": "37.724957"
@@ -3881,7 +3881,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Ocean Ave & Fairfield Way",
+        "Name": "Ocean Ave & Victoria/Fairfield Way",
         "Location": {
             "Longitude": "-122.464072",
             "Latitude": "37.726008"
@@ -3904,7 +3904,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Ocean Ave & Jules Ave",
+        "Name": "Ocean Ave & Jules Ave/Dorado Ter",
         "Location": {
             "Longitude": "-122.46139",
             "Latitude": "37.724955"
@@ -4065,7 +4065,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Ocean Ave & Victoria St",
+        "Name": "Ocean Ave & Victoria/Fairfield Way",
         "Location": {
             "Longitude": "-122.464337",
             "Latitude": "37.726029"
@@ -5266,7 +5266,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Duboce St/Noe St/Duboce Park",
+        "Name": "Duboce St/Noe St",
         "Location": {
             "Longitude": "-122.433557",
             "Latitude": "37.769357"
@@ -6186,7 +6186,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Sunset Tunnel East Portal",
+        "Name": "Duboce St/Noe St",
         "Location": {
             "Longitude": "-122.433511",
             "Latitude": "37.769285"
@@ -7359,7 +7359,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Right Of Way/18th St",
+        "Name": "Church St & 18th St",
         "Location": {
             "Longitude": "-122.428184",
             "Latitude": "37.761192"
@@ -8854,7 +8854,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "4th & Brannan Southbound",
+        "Name": "4th & Brannan",
         "Location": {
             "Longitude": "-122.396613",
             "Latitude": "37.778341"
@@ -9038,7 +9038,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Fourth Street & Brannan Northbound",
+        "Name": "4th & Brannan",
         "Location": {
             "Longitude": "-122.39659",
             "Latitude": "37.778403"
@@ -9682,7 +9682,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Ucsf / Chase Center (16th Street)",
+        "Name": "Ucsf / Chase Center (16th St)",
         "Location": {
             "Longitude": "-122.389366",
             "Latitude": "37.768237"
@@ -9751,7 +9751,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Union Square/Market St Station Northbound",
+        "Name": "Union Square/Market St Station",
         "Location": {
             "Longitude": "-122.406477",
             "Latitude": "37.787151"
@@ -9774,7 +9774,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Union Square/Market St Station Southbound",
+        "Name": "Union Square/Market St Station",
         "Location": {
             "Longitude": "-122.406523",
             "Latitude": "37.787133"
@@ -9797,7 +9797,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Yerba Buena/Moscone Station Northbound",
+        "Name": "Yerba Buena/Moscone Station",
         "Location": {
             "Longitude": "-122.401551",
             "Latitude": "37.782358"
@@ -9820,7 +9820,7 @@
                 "ToDate": "2025-01-31T23:59:00-08:00"
             }
         },
-        "Name": "Yerba Buena/Moscone Station Southbound",
+        "Name": "Yerba Buena/Moscone Station",
         "Location": {
             "Longitude": "-122.401551",
             "Latitude": "37.782161"

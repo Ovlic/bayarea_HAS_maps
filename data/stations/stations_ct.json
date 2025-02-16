@@ -10,7 +10,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "22nd Street Caltrain Station Northbound",
+        "Name": "22nd Street Caltrain Station",
         "Location": {
             "Longitude": "-122.39188",
             "Latitude": "37.757599"
@@ -36,7 +36,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "22nd Street Caltrain Station Southbound",
+        "Name": "22nd Street Caltrain Station",
         "Location": {
             "Longitude": "-122.392404",
             "Latitude": "37.757583"
@@ -62,7 +62,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "California Avenue Caltrain Station Northbound",
+        "Name": "California Avenue Caltrain Station",
         "Location": {
             "Longitude": "-122.141927",
             "Latitude": "37.429365"
@@ -87,7 +87,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "California Avenue Caltrain Station Southbound",
+        "Name": "California Avenue Caltrain Station",
         "Location": {
             "Longitude": "-122.141978",
             "Latitude": "37.429333"
@@ -112,7 +112,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Hillsdale Caltrain Station Northbound",
+        "Name": "Hillsdale Caltrain Station",
         "Location": {
             "Longitude": "-122.3014966366",
             "Latitude": "37.542607659"
@@ -138,7 +138,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Hillsdale Caltrain Station Southbound",
+        "Name": "Hillsdale Caltrain Station",
         "Location": {
             "Longitude": "-122.301666",
             "Latitude": "37.542536"
@@ -164,7 +164,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Lawrence Caltrain Station Northbound",
+        "Name": "Lawrence Caltrain Station",
         "Location": {
             "Longitude": "-121.997114",
             "Latitude": "37.370598"
@@ -189,7 +189,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Lawrence Caltrain Station Southbound",
+        "Name": "Lawrence Caltrain Station",
         "Location": {
             "Longitude": "-121.997135",
             "Latitude": "37.370484"
@@ -214,7 +214,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Menlo Park Caltrain Station Northbound",
+        "Name": "Menlo Park Caltrain Station",
         "Location": {
             "Longitude": "-122.182297",
             "Latitude": "37.454856"
@@ -239,7 +239,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Menlo Park Caltrain Station Southbound",
+        "Name": "Menlo Park Caltrain Station",
         "Location": {
             "Longitude": "-122.182405",
             "Latitude": "37.454745"
@@ -264,7 +264,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Millbrae Caltrain Station Northbound",
+        "Name": "Millbrae Caltrain Station",
         "Location": {
             "Longitude": "-122.386647",
             "Latitude": "37.59988"
@@ -272,10 +272,14 @@
         "Url": null,
         "StopType": "onstreetBus",
         "connections": [
-            "Limited",
             "Local Weekday",
             "Local Weekend",
-            "Express"
+            "Limited",
+            "Express",
+            "Red",
+            "Yellow",
+            "Limited",
+            "Limited"
         ],
         "operator": "CT"
     },
@@ -290,7 +294,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Millbrae Caltrain Station Southbound",
+        "Name": "Millbrae Caltrain Station",
         "Location": {
             "Longitude": "-122.386832",
             "Latitude": "37.599797"
@@ -298,10 +302,14 @@
         "Url": null,
         "StopType": "onstreetBus",
         "connections": [
-            "Limited",
             "Local Weekday",
             "Local Weekend",
-            "Express"
+            "Limited",
+            "Express",
+            "Red",
+            "Yellow",
+            "Limited",
+            "Limited"
         ],
         "operator": "CT"
     },
@@ -316,7 +324,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Mountain View Caltrain Station Northbound",
+        "Name": "Mountain View Caltrain Station",
         "Location": {
             "Longitude": "-122.075956",
             "Latitude": "37.394459"
@@ -324,10 +332,13 @@
         "Url": null,
         "StopType": "onstreetBus",
         "connections": [
-            "Limited",
             "Local Weekday",
             "Local Weekend",
-            "Express"
+            "Limited",
+            "Express",
+            "Orange Line",
+            "Limited",
+            "Limited"
         ],
         "operator": "CT"
     },
@@ -342,7 +353,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Mountain View Caltrain Station Southbound",
+        "Name": "Mountain View Caltrain Station",
         "Location": {
             "Longitude": "-122.075994",
             "Latitude": "37.394402"
@@ -350,10 +361,13 @@
         "Url": null,
         "StopType": "onstreetBus",
         "connections": [
-            "Limited",
             "Local Weekday",
             "Local Weekend",
-            "Express"
+            "Limited",
+            "Express",
+            "Orange Line",
+            "Limited",
+            "Limited"
         ],
         "operator": "CT"
     },
@@ -368,7 +382,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Palo Alto Caltrain Station Northbound",
+        "Name": "Palo Alto Caltrain Station",
         "Location": {
             "Longitude": "-122.164614",
             "Latitude": "37.443475"
@@ -394,7 +408,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Palo Alto Caltrain Station Southbound",
+        "Name": "Palo Alto Caltrain Station",
         "Location": {
             "Longitude": "-122.164697",
             "Latitude": "37.443405"
@@ -420,7 +434,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Redwood City Caltrain Station Northbound",
+        "Name": "Redwood City Caltrain Station",
         "Location": {
             "Longitude": "-122.231936",
             "Latitude": "37.486159"
@@ -446,7 +460,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Redwood City Caltrain Station Southbound",
+        "Name": "Redwood City Caltrain Station",
         "Location": {
             "Longitude": "-122.232",
             "Latitude": "37.486101"
@@ -472,7 +486,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "San Antonio Caltrain Station Northbound",
+        "Name": "San Antonio Caltrain Station",
         "Location": {
             "Longitude": "-122.1070020272",
             "Latitude": "37.4073321574"
@@ -497,7 +511,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "San Antonio Caltrain Station Southbound",
+        "Name": "San Antonio Caltrain Station",
         "Location": {
             "Longitude": "-122.1071162171",
             "Latitude": "37.4072397241"
@@ -522,7 +536,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "San Francisco Caltrain Station Northbound",
+        "Name": "San Francisco Caltrain Station",
         "Location": {
             "Longitude": "-122.394992",
             "Latitude": "37.77639"
@@ -548,7 +562,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "San Francisco Caltrain Station Southbound",
+        "Name": "San Francisco Caltrain Station",
         "Location": {
             "Longitude": "-122.394935",
             "Latitude": "37.776348"
@@ -574,7 +588,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "San Jose Diridon Caltrain Station Northbound",
+        "Name": "San Jose Diridon Caltrain Station",
         "Location": {
             "Longitude": "-121.903011",
             "Latitude": "37.329239"
@@ -582,11 +596,16 @@
         "Url": null,
         "StopType": "onstreetBus",
         "connections": [
-            "Limited",
-            "South County",
             "Local Weekday",
             "Local Weekend",
-            "Express"
+            "Limited",
+            "Express",
+            "ACETrain",
+            "CC",
+            "Green Line",
+            "Limited",
+            "Limited",
+            "South County"
         ],
         "operator": "CT"
     },
@@ -601,7 +620,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "San Jose Diridon Caltrain Station Southbound",
+        "Name": "San Jose Diridon Caltrain Station",
         "Location": {
             "Longitude": "-121.903173",
             "Latitude": "37.329231"
@@ -609,11 +628,16 @@
         "Url": null,
         "StopType": "onstreetBus",
         "connections": [
-            "Limited",
-            "South County",
             "Local Weekday",
             "Local Weekend",
-            "Express"
+            "Limited",
+            "Express",
+            "ACETrain",
+            "CC",
+            "Green Line",
+            "Limited",
+            "Limited",
+            "South County"
         ],
         "operator": "CT"
     },
@@ -628,7 +652,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "San Mateo Caltrain Station Northbound",
+        "Name": "San Mateo Caltrain Station",
         "Location": {
             "Longitude": "-122.323851",
             "Latitude": "37.568087"
@@ -654,7 +678,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "San Mateo Caltrain Station Southbound",
+        "Name": "San Mateo Caltrain Station",
         "Location": {
             "Longitude": "-122.324092",
             "Latitude": "37.568294"
@@ -680,7 +704,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Santa Clara Caltrain Station Northbound",
+        "Name": "Santa Clara Caltrain Station",
         "Location": {
             "Longitude": "-121.93608",
             "Latitude": "37.353238"
@@ -688,34 +712,12 @@
         "Url": null,
         "StopType": "onstreetBus",
         "connections": [
-            "Limited",
             "Local Weekday",
-            "Local Weekend"
-        ],
-        "operator": "CT"
-    },
-    {
-        "id": "70242",
-        "Extensions": {
-            "LocationType": "0",
-            "PlatformCode": null,
-            "ParentStation": "santa_clara",
-            "ValidBetween": {
-                "FromDate": "2024-09-21T00:00:00-08:00",
-                "ToDate": "2025-01-26T23:59:00-08:00"
-            }
-        },
-        "Name": "Santa Clara Caltrain Station Southbound",
-        "Location": {
-            "Longitude": "-121.936135",
-            "Latitude": "37.353189"
-        },
-        "Url": null,
-        "StopType": "onstreetBus",
-        "connections": [
+            "Local Weekend",
             "Limited",
-            "Local Weekday",
-            "Local Weekend"
+            "ACETrain",
+            "CC",
+            "Limited"
         ],
         "operator": "CT"
     },
@@ -730,7 +732,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "South San Francisco Caltrain Station Northbound",
+        "Name": "South San Francisco Caltrain Station",
         "Location": {
             "Longitude": "-122.4049790512",
             "Latitude": "37.6559413948"
@@ -756,7 +758,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "South San Francisco Caltrain Station Southbound",
+        "Name": "South San Francisco Caltrain Station",
         "Location": {
             "Longitude": "-122.4049797097",
             "Latitude": "37.6559419334"
@@ -782,7 +784,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Sunnyvale Caltrain Station Northbound",
+        "Name": "Sunnyvale Caltrain Station",
         "Location": {
             "Longitude": "-122.031372",
             "Latitude": "37.378916"
@@ -808,7 +810,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Sunnyvale Caltrain Station Southbound",
+        "Name": "Sunnyvale Caltrain Station",
         "Location": {
             "Longitude": "-122.031423",
             "Latitude": "37.378789"
@@ -834,7 +836,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Blossom Hill Caltrain Station Northbound",
+        "Name": "Blossom Hill Caltrain Station",
         "Location": {
             "Longitude": "-121.797643",
             "Latitude": "37.252422"
@@ -857,7 +859,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Blossom Hill Caltrain Station Southbound",
+        "Name": "Blossom Hill Caltrain Station",
         "Location": {
             "Longitude": "-121.797683",
             "Latitude": "37.252379"
@@ -880,7 +882,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Capitol Caltrain Station Northbound",
+        "Name": "Capitol Caltrain Station",
         "Location": {
             "Longitude": "-121.841955",
             "Latitude": "37.284102"
@@ -903,7 +905,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Capitol Caltrain Station Southbound",
+        "Name": "Capitol Caltrain Station",
         "Location": {
             "Longitude": "-121.842037",
             "Latitude": "37.284062"
@@ -926,7 +928,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Gilroy Caltrain Station Northbound",
+        "Name": "Gilroy Caltrain Station",
         "Location": {
             "Longitude": "-121.566088",
             "Latitude": "37.003538"
@@ -949,7 +951,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Gilroy Caltrain Station Southbound",
+        "Name": "Gilroy Caltrain Station",
         "Location": {
             "Longitude": "-121.566225",
             "Latitude": "37.003485"
@@ -972,7 +974,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Morgan Hill Caltrain Station Northbound",
+        "Name": "Morgan Hill Caltrain Station",
         "Location": {
             "Longitude": "-121.650244",
             "Latitude": "37.129363"
@@ -995,7 +997,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Morgan Hill Caltrain Station Southbound",
+        "Name": "Morgan Hill Caltrain Station",
         "Location": {
             "Longitude": "-121.650304",
             "Latitude": "37.129321"
@@ -1018,7 +1020,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "San Martin Caltrain Station Northbound",
+        "Name": "San Martin Caltrain Station",
         "Location": {
             "Longitude": "-121.610049",
             "Latitude": "37.085225"
@@ -1041,7 +1043,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "San Martin Caltrain Station Southbound",
+        "Name": "San Martin Caltrain Station",
         "Location": {
             "Longitude": "-121.610936",
             "Latitude": "37.086653"
@@ -1064,7 +1066,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Tamien Caltrain Station Northbound",
+        "Name": "Tamien Caltrain Station",
         "Location": {
             "Longitude": "-121.883721",
             "Latitude": "37.31174"
@@ -1089,7 +1091,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Tamien Caltrain Station Southbound",
+        "Name": "Tamien Caltrain Station",
         "Location": {
             "Longitude": "-121.883999",
             "Latitude": "37.31175"
@@ -1114,7 +1116,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Bayshore Caltrain Station Northbound",
+        "Name": "Bayshore Caltrain Station",
         "Location": {
             "Longitude": "-122.401586",
             "Latitude": "37.709537"
@@ -1138,7 +1140,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Bayshore Caltrain Station Southbound",
+        "Name": "Bayshore Caltrain Station",
         "Location": {
             "Longitude": "-122.40198",
             "Latitude": "37.709544"
@@ -1162,7 +1164,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Belmont Caltrain Station Northbound",
+        "Name": "Belmont Caltrain Station",
         "Location": {
             "Longitude": "-122.275738",
             "Latitude": "37.52089"
@@ -1186,7 +1188,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Belmont Caltrain Station Southbound",
+        "Name": "Belmont Caltrain Station",
         "Location": {
             "Longitude": "-122.275816",
             "Latitude": "37.520844"
@@ -1210,7 +1212,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Burlingame Caltrain Station Northbound",
+        "Name": "Burlingame Caltrain Station",
         "Location": {
             "Longitude": "-122.3449",
             "Latitude": "37.580197"
@@ -1234,7 +1236,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Burlingame Caltrain Station Southbound",
+        "Name": "Burlingame Caltrain Station",
         "Location": {
             "Longitude": "-122.345075",
             "Latitude": "37.580186"
@@ -1258,7 +1260,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "College Park Caltrain Station Northbound",
+        "Name": "College Park Caltrain Station",
         "Location": {
             "Longitude": "-121.9146",
             "Latitude": "37.342384"
@@ -1281,7 +1283,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "College Park Caltrain Station Southbound",
+        "Name": "College Park Caltrain Station",
         "Location": {
             "Longitude": "-121.914677",
             "Latitude": "37.342338"
@@ -1304,7 +1306,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Hayward Park Caltrain Station Northbound",
+        "Name": "Hayward Park Caltrain Station",
         "Location": {
             "Longitude": "-122.309338",
             "Latitude": "37.552938"
@@ -1328,7 +1330,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Hayward Park Caltrain Station Southbound",
+        "Name": "Hayward Park Caltrain Station",
         "Location": {
             "Longitude": "-122.309608",
             "Latitude": "37.552994"
@@ -1352,7 +1354,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "San Bruno Caltrain Station Northbound",
+        "Name": "San Bruno Caltrain Station",
         "Location": {
             "Longitude": "-122.4115926041",
             "Latitude": "37.6304996012"
@@ -1376,7 +1378,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "San Bruno Caltrain Station Southbound",
+        "Name": "San Bruno Caltrain Station",
         "Location": {
             "Longitude": "-122.4117090507",
             "Latitude": "37.6304605129"
@@ -1400,7 +1402,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "San Carlos Caltrain Station Northbound",
+        "Name": "San Carlos Caltrain Station",
         "Location": {
             "Longitude": "-122.26015",
             "Latitude": "37.50805"
@@ -1424,7 +1426,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "San Carlos Caltrain Station Southbound",
+        "Name": "San Carlos Caltrain Station",
         "Location": {
             "Longitude": "-122.260266",
             "Latitude": "37.507933"
@@ -1448,7 +1450,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Broadway Caltrain Station Northbound",
+        "Name": "Broadway Caltrain Station",
         "Location": {
             "Longitude": "-122.36265",
             "Latitude": "37.58764"
@@ -1471,7 +1473,7 @@
                 "ToDate": "2025-01-26T23:59:00-08:00"
             }
         },
-        "Name": "Broadway Caltrain Station Southbound",
+        "Name": "Broadway Caltrain Station",
         "Location": {
             "Longitude": "-122.362708",
             "Latitude": "37.587552"
