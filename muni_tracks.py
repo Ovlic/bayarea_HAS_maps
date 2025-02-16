@@ -4,49 +4,50 @@ import json, folium
 n_dt = ["way/25025892", "way/160312612", "way/160312613", "way/160312615", "way/427294307", "way/427294308", "way/556413439", "way/556413440", "way/740756378"]
 t_dt = ["way/1128011243", "way/1128011244"]
 
+data_path = "data"
 
 # Load the data
-with open('track_data/updated_muni_tracks.geojson') as f:
+with open(data_path + 'track_data/updated_muni_tracks.geojson') as f:
     data = json.load(f)
 
-with open('track_data/muni_platforms.geojson') as f:
+with open(data_path + 'track_data/muni_platforms.geojson') as f:
     platforms = json.load(f)
 
-with open('track_data/test_past_dc.geojson') as f:
+with open(data_path + 'track_data/test_past_dc.geojson') as f:
     past_dc = json.load(f)
 
-with open('track_data/past_millbrae.geojson') as f:
+with open(data_path + 'track_data/past_millbrae.geojson') as f:
     past_millbrae = json.load(f)
 
-with open('track_data/n_downtown.geojson') as f:
+with open(data_path + 'track_data/n_downtown.geojson') as f:
     n_downtown = json.load(f)
     for feature in n_downtown['features']:
         # Add the feature to n_dt if it is not already in there
         if feature['properties']['id'] not in n_dt:
             n_dt.append(feature['properties']['id'])
 
-with open('track_data/muni_e.geojson') as f:
+with open(data_path + 'track_data/muni_e.geojson') as f:
     muni_e = json.load(f)
 
-with open('track_data/j_line_crossovers.geojson') as f:
+with open(data_path + 'track_data/j_line_crossovers.geojson') as f:
     j_line_crossovers = json.load(f)
 
-with open('track_data/k_line_crossovers.geojson') as f:
+with open(data_path + 'track_data/k_line_crossovers.geojson') as f:
     k_line_crossovers = json.load(f)
 
-with open('track_data/l_line_crossovers.geojson') as f:
+with open(data_path + 'track_data/l_line_crossovers.geojson') as f:
     l_line_crossovers = json.load(f)
 
-with open('track_data/m_line_crossovers.geojson') as f:
+with open(data_path + 'track_data/m_line_crossovers.geojson') as f:
     m_line_crossovers = json.load(f)
 
-with open('track_data/n_line_crossovers.geojson') as f:
+with open(data_path + 'track_data/n_line_crossovers.geojson') as f:
     n_line_crossovers = json.load(f)
 
-with open('track_data/t_line_crossovers.geojson') as f:
+with open(data_path + 'track_data/t_line_crossovers.geojson') as f:
     t_line_crossovers = json.load(f)
 
-with open("colors.json") as f:
+with open(data_path + "colors.json") as f:
     colors = json.load(f)
 
 
@@ -214,4 +215,4 @@ m.add_child(null_tracks)
 m.add_child(folium.LayerControl())
 
 # Save the map
-m.save('muni_tracks.html')
+m.save('local/muni_tracks.html')
