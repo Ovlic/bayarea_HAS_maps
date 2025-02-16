@@ -1,0 +1,62 @@
+{
+    "CE": {
+        "ACETrain": "#9c67a0"
+    },
+    "BA": {
+        "Orange-N": "#faa61a",
+        "Orange-S": "#faa61a",
+        "Green-N": "#4db848",
+        "Green-S": "#4db848",
+        "Red-N": "#ed1c24",
+        "Red-S": "#ed1c24",
+        "Blue-N": "#00aeef",
+        "Blue-S": "#00aeef",
+        "Yellow-N": "#ffe800",
+        "Yellow-S": "#ffe800",
+        "Beige-N": "#aba682",
+        "Beige-S": "#aba682"
+    },
+    "CT": {
+        "Limited": "#94DFE2",
+        "South County": "#FFF3D4",
+        "Local Weekday": "#FFFFFF",
+        "Local Weekend": "#FFFFFF",
+        "Express": "#F32F29"
+    },
+    "AM": {
+        "CC": "#1D1B4D"
+    },
+    "SI": {
+        "Red Line": "#c42524",
+        "Blue Line": "#43b0dc"
+    },
+    "SF": {
+        "L": "#932290",
+        "M": "#008851",
+        "N": "#004988",
+        "J": "#e18813",
+        "K": "#549dbf",
+        "T": "#d40843",
+        "CA": "#FFA500",
+        "PM": "#49b510",
+        "PH": "#cf2be9",
+        "FBUS": "#f0e68c",
+        "F": "#f0e68c",
+        "E": "#666666",
+        "S": "#ffcc00",
+        "014R": "#6b6608",
+        "038R": "#ed6d27",
+        "38R": "#ed6d27",
+        "005R": "#6631b5",
+        "009R": "#ba1bf9",
+        "028R": "#19e2d7"
+    },
+    "SA": {
+        "SMART": "#003000"
+    },
+    "SC": {
+        "Green Line": "#73c92c",
+        "Orange Line": "#ff8300",
+        "Blue Line": "#4cb4e7"
+    }
+}
