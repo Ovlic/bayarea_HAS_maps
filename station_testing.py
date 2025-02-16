@@ -1,5 +1,5 @@
 
-from my_session import MySession
+from utils.my_session import MySession
 import json, time, os, dotenv
 from requests.exceptions import HTTPError
 
