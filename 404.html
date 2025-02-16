@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        p {
+            font-size: 0.9em;
+            color: #555;
+        }
+        a {
+            color: #0073e6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const currentPath = window.location.pathname;
+            const mapsPath = "/maps" + currentPath;
+            document.getElementById("maps-link").href = mapsPath;
+        });
+    </script>
+</head>
+<body>
+    <h1>Page not found!</h1>
+    <p>Files have moved! Have you checked the <a id="maps-link" href="#">maps folder?</a></p>
+    <p><a href="https://github.com/Ovlic/bayarea_HAS_maps">GitHub Repository</a></p>
+</body>
+</html>
