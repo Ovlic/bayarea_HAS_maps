@@ -6,3 +6,6 @@ __pycache__/
 
 # Local folder for testing html
 local/
+
+# QGIS files
+data/qgis_track_data/
