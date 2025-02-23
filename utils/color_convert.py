@@ -45,8 +45,9 @@ def convert_hex_string(hex_string):
     return int(combined, 16)
 
 # Example Usage
-try:
-    result = convert_hex_string("#9c67a0")
-    print(f"Converted value: {result}")
-except ValueError as e:
-    print(f"Error: {e}")
+if __name__ == "__main__":
+    try:
+        result = convert_hex_string("#9c67a0")
+        print(f"Converted value: {result}")
+    except ValueError as e:
+        print(f"Error: {e}")
