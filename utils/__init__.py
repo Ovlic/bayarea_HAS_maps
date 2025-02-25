@@ -31,3 +31,19 @@ def makeBeautifyIcon(
         icon_size=icon_size,
         icon_anchor=icon_anchor,
         )
+
+def get_operator(line:str):
+    if line in ["Blue", "Red", "Yellow", "Orange", "Green", "Beige"]: # BART
+        return "BA"
+    if line in ["F", "J", "K", "L", "M", "N", "T", "38R", "CA", "PH", "PM"]: # MUNI
+        return "SF"
+    if line in ["Local Weekday", "Local Weekend", "Limited", "Express", "South County"]: # Caltrain
+        return "CT"
+    if line in ["Blue Line", "Green Line", "Orange Line"]: # VTA
+        return "SC"
+    if line in ["Red Line AirTrain", "Blue Line AirTrain"]:
+        return "SI"
+    if line == "ACETrain": # ACE
+        return "CE"
+    if line == "CC": # Capitol Corridor
+        return "AM"
