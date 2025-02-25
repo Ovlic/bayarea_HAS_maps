@@ -1,8 +1,16 @@
 {
     "CE": {
-        "ACETrain": "#9c67a0"
+        "ACETrain": "#9c67a0",
+        "ACE": "#9c67a0"
     },
     "BA": {
+        "Orange": "#faa61a",
+        "Red": "#ed1c24",
+        "Blue": "#00aeef",
+        "Green": "#4db848",
+        "Yellow": "#ffe800",
+        "Beige": "#aba682",
+
         "Orange-N": "#faa61a",
         "Orange-S": "#faa61a",
         "Green-N": "#4db848",
@@ -19,8 +27,10 @@
     "CT": {
         "Limited": "#94DFE2",
         "South County": "#FFF3D4",
-        "Local Weekday": "#FFFFFF",
-        "Local Weekend": "#FFFFFF",
+        "Local Weekday_WHITE-DONTUSE": "#FFFFFF",
+        "Local Weekend_WHITE-DONTUSE": "#FFFFFF",
+        "Local Weekday": "#9e9e9e",
+        "Local Weekend": "#9e9e9e",
         "Express": "#F32F29"
     },
     "AM": {
@@ -28,7 +38,9 @@
     },
     "SI": {
         "Red Line": "#c42524",
-        "Blue Line": "#43b0dc"
+        "Blue Line": "#43b0dc",
+        "Red Line AirTrain": "#c42524",
+        "Blue Line AirTrain": "#43b0dc"
     },
     "SF": {
         "L": "#932290",
