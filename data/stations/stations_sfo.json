@@ -18,8 +18,8 @@
         "Url": null,
         "StopType": "other",
         "connections": [
-            "Red Line",
-            "Blue Line"
+            "Red Line AirTrain",
+            "Blue Line AirTrain"
         ],
         "operator": "SI"
     },
@@ -34,7 +34,7 @@
                 "ToDate": "2029-12-31T23:59:00-08:00"
             }
         },
-        "Name": "Garage G and BART",
+        "Name": "Garage G and BART/San Francisco International Airport",
         "Location": {
             "Longitude": "-122.3923632",
             "Latitude": "37.6159954"
@@ -42,8 +42,10 @@
         "Url": null,
         "StopType": "other",
         "connections": [
-            "Red Line",
-            "Blue Line"
+            "Red Line AirTrain",
+            "Blue Line AirTrain",
+            "Red",
+            "Yellow"
         ],
         "operator": "SI"
     },
@@ -66,8 +68,8 @@
         "Url": null,
         "StopType": "other",
         "connections": [
-            "Red Line",
-            "Blue Line"
+            "Red Line AirTrain",
+            "Blue Line AirTrain"
         ],
         "operator": "SI"
     },
@@ -90,8 +92,8 @@
         "Url": null,
         "StopType": "other",
         "connections": [
-            "Red Line",
-            "Blue Line"
+            "Red Line AirTrain",
+            "Blue Line AirTrain"
         ],
         "operator": "SI"
     },
@@ -114,8 +116,8 @@
         "Url": null,
         "StopType": "other",
         "connections": [
-            "Red Line",
-            "Blue Line"
+            "Red Line AirTrain",
+            "Blue Line AirTrain"
         ],
         "operator": "SI"
     },
@@ -138,8 +140,8 @@
         "Url": null,
         "StopType": "other",
         "connections": [
-            "Red Line",
-            "Blue Line"
+            "Red Line AirTrain",
+            "Blue Line AirTrain"
         ],
         "operator": "SI"
     },
@@ -162,8 +164,8 @@
         "Url": null,
         "StopType": "other",
         "connections": [
-            "Red Line",
-            "Blue Line"
+            "Red Line AirTrain",
+            "Blue Line AirTrain"
         ],
         "operator": "SI"
     },
@@ -186,8 +188,8 @@
         "Url": null,
         "StopType": "other",
         "connections": [
-            "Red Line",
-            "Blue Line"
+            "Red Line AirTrain",
+            "Blue Line AirTrain"
         ],
         "operator": "SI"
     },
@@ -210,7 +212,7 @@
         "Url": null,
         "StopType": "other",
         "connections": [
-            "Blue Line"
+            "Blue Line AirTrain"
         ],
         "operator": "SI"
     },
@@ -233,7 +235,7 @@
         "Url": null,
         "StopType": "other",
         "connections": [
-            "Blue Line"
+            "Blue Line AirTrain"
         ],
         "operator": "SI"
     },
@@ -256,7 +258,7 @@
         "Url": null,
         "StopType": "other",
         "connections": [
-            "Blue Line"
+            "Blue Line AirTrain"
         ],
         "operator": "SI"
     }
