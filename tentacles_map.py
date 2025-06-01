@@ -1,6 +1,6 @@
 
 import folium, json, os, dotenv
-from location_test import add_location_circle
+from location_test import add_location_circle2
 from folium.plugins import LocateControl
 from xyzservices import TileProvider
 import transit_map
@@ -8,7 +8,7 @@ import transit_map
 # Load .env file
 dotenv.load_dotenv()
 
-folder_path = "tentacles_data"
+folder_path = "data/tentacles_data"
 with open(os.path.join(folder_path, "hospitals.geojson"), "r") as f:
     hospitals = json.load(f)
 
@@ -24,8 +24,11 @@ with open(os.path.join(folder_path, "museums.geojson"), "r") as f:
 with open(os.path.join(folder_path, "zoos.geojson"), "r") as f:
     zoos = json.load(f)
 
+with open(os.path.join(folder_path, "golf_courses.geojson"), "r") as f:
+    golf_courses = json.load(f)
+
 # Load San Francisco County boundary GeoJSON
-with open('sf.geojson', 'r') as f:
+with open('data/borders/sf.geojson', 'r') as f:
     sf_boundary_geojson = json.load(f)
 
 # Create the folium map
@@ -66,6 +69,7 @@ libraries_fg = folium.FeatureGroup(name="Libraries")
 movie_theaters_fg = folium.FeatureGroup(name="Movie Theaters")
 museums_fg = folium.FeatureGroup(name="Museums")
 zoos_fg = folium.FeatureGroup(name="Zoos")
+golf_courses_fg = folium.FeatureGroup(name="Golf Courses")
 
 
 # Loop through each feature in the GeoJSON files
@@ -114,12 +118,50 @@ for feature in zoos["features"]:
         icon=folium.Icon(color="orange", icon="leaf")
     ).add_to(zoos_fg)
 
+for golf_course in golf_courses['features']:
+    if golf_course["properties"]["type"] == "public":
+        folium.Marker(
+            location = [
+                golf_course["geometry"]["coordinates"][1],
+                golf_course["geometry"]["coordinates"][0]
+            ],
+            # Popup with name and type
+            # Like this: "**name**: name-here\n**type**: type-here"
+            # ** is bold in markdown, make it bold in the popup
+            popup = folium.Popup(
+                f"<b>Name</b>: {golf_course['properties']['name']}<br><b>Type</b>: {golf_course['properties']['type']}",
+                max_width=265
+            ),
+            icon = folium.Icon(
+                color="blue", 
+                icon="golf-ball-tee", 
+                prefix="fa"
+            )
+        ).add_to(golf_courses_fg)
+    else:
+        folium.Marker(
+            location = [
+                golf_course["geometry"]["coordinates"][1],
+                golf_course["geometry"]["coordinates"][0]
+            ],
+            popup = folium.Popup(
+                f"<b>Name</b>: {golf_course['properties']['name']}<br><b>Type</b>: {golf_course['properties']['type']}",
+                max_width=265
+            ),
+            icon = folium.Icon(
+                color="red", 
+                icon="golf-ball-tee", 
+                prefix="fa"
+            )
+        ).add_to(golf_courses_fg)
+
 # Add FeatureGroups to the map
 hospitals_fg.add_to(m)
 libraries_fg.add_to(m)
 movie_theaters_fg.add_to(m)
 museums_fg.add_to(m)
 zoos_fg.add_to(m)
+golf_courses_fg.add_to(m)
 
 # Add San Francisco County boundary to the map
 # Add the boundary to the map
@@ -138,7 +180,7 @@ folium.GeoJson(
 # add_location_circle(m, 1609.34) # 1 mile in meters
 
 # Add plugins
-transit_map.add_plugins(m, location_circle=True, radius_meters=1609.34)
+transit_map.add_plugins(m)#, location_circle=True, radius_meters=1609.34)
 
 # Save the map
-m.save("tentacles_map.html")
+m.save("local/tentacles_map.html")

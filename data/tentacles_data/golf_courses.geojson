@@ -1,0 +1,141 @@
+{
+	"type":"FeatureCollection",
+	"features":[
+		{
+			"type":"Feature",
+			"id":"0B2C47536B3664C9552D",
+			"geometry":{
+				"type":"Point",
+				"coordinates":[
+					-122.4597914,
+					37.7904944,
+					0
+				]
+			},
+			"properties":{
+				"name":"Presidio Golf Course",
+				"altitudeMode":"relativeToGround",
+                "type": "public"
+			}
+		},
+		{
+			"type":"Feature",
+			"id":"0374485FB03664C9981C",
+			"geometry":{
+				"type":"Point",
+				"coordinates":[
+					-122.4944458,
+					37.7823104,
+					0
+				]
+			},
+			"properties":{
+				"name":"Lincoln Park Golf Course",
+				"altitudeMode":"relativeToGround",
+                "type": "public"
+			}
+		},
+		{
+			"type":"Feature",
+			"id":"0AC081CCFA3664C9D270",
+			"geometry":{
+				"type":"Point",
+				"coordinates":[
+					-122.5076753,
+					37.769504,
+					0
+				]
+			},
+			"properties":{
+				"name":"Golden Gate Park Golf Course",
+				"altitudeMode":"relativeToGround",
+                "type": "public"
+			}
+		},
+		{
+			"type":"Feature",
+			"id":"0583E6BE3E3664CA2A11",
+			"geometry":{
+				"type":"Point",
+				"coordinates":[
+					-122.4932023,
+					37.7248228,
+					0
+				]
+			},
+			"properties":{
+				"name":"TPC Harding Park",
+				"altitudeMode":"relativeToGround",
+                "type": "public"
+			}
+		},
+		{
+			"type":"Feature",
+			"id":"07AEF780463664CC148E",
+			"geometry":{
+				"type":"Point",
+				"coordinates":[
+					-122.4243943,
+					37.7158711,
+					0
+				]
+			},
+			"properties":{
+				"name":"Gleneagles",
+				"altitudeMode":"relativeToGround",
+                "type": "public"
+			}
+		},
+		{
+			"type":"Feature",
+			"id":"015E0DABFB3664CB2212",
+			"geometry":{
+				"type":"Point",
+				"coordinates":[
+					-122.4932672,
+					37.7085911,
+					0
+				]
+			},
+			"properties":{
+				"name":"The Olympic Club",
+				"altitudeMode":"relativeToGround",
+                "type": "private"
+			}
+		},
+		{
+			"type":"Feature",
+			"id":"061821840E3664CB65D1",
+			"geometry":{
+				"type":"Point",
+				"coordinates":[
+					-122.4774742,
+					37.7122268,
+					0
+				]
+			},
+			"properties":{
+				"name":"San Francisco Golf Club",
+				"altitudeMode":"relativeToGround",
+                "type": "private"
+			}
+		},
+		{
+			"type":"Feature",
+			"id":"0E508BD4543664CBC717",
+			"geometry":{
+				"type":"Point",
+				"coordinates":[
+					-122.4720509,
+					37.6959961,
+					0
+				]
+			},
+			"properties":{
+				"name":"Lake Merced Golf Club",
+				"altitudeMode":"relativeToGround",
+                "type": "private"
+			}
+		}
+	]
+}
