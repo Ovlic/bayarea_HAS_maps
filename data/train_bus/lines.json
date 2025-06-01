@@ -240,7 +240,7 @@
     ],
     "SI": [
         {
-            "Id": "Red Line",
+            "Id": "Red Line AirTrain",
             "Name": "SFO AirTrain Red Line",
             "FromDate": "2023-04-26T00:00:00-08:00",
             "ToDate": "2029-12-31T23:59:00-08:00",
@@ -262,7 +262,7 @@
             "OperatorRef": "SI"
         },
         {
-            "Id": "Blue Line",
+            "Id": "Blue Line AirTrain",
             "Name": "SFO AirTrain Blue Line",
             "FromDate": "2023-04-26T00:00:00-08:00",
             "ToDate": "2029-12-31T23:59:00-08:00",

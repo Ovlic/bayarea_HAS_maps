@@ -60108,7 +60108,7 @@
         }
     },
     "SI": {
-        "Red Line": {
+        "Red Line AirTrain": {
             "trip_ids": [
                 "708"
             ],
@@ -63764,7 +63764,7 @@
             ],
             "color": "#c42524"
         },
-        "Blue Line": {
+        "Blue Line AirTrain": {
             "trip_ids": [
                 "1068"
             ],
