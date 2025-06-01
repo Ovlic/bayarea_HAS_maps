@@ -363,7 +363,8 @@
         "StopType": "onstreetBus",
         "connections": [
             "Orange",
-            "Green"
+            "Green",
+            "Orange Line"
         ],
         "operator": "BA"
     },
@@ -742,7 +743,7 @@
                 "ToDate": "2025-08-10T23:59:00-08:00"
             }
         },
-        "Name": "Millbrae (Caltrain Transfer Platform)",
+        "Name": "Millbrae Caltrain Station",
         "Location": {
             "Longitude": "-122.38684",
             "Latitude": "37.600199"
@@ -751,7 +752,11 @@
         "StopType": "onstreetBus",
         "connections": [
             "Red",
-            "Yellow"
+            "Yellow",
+            "Local Weekday",
+            "Local Weekend",
+            "Limited",
+            "Express"
         ],
         "operator": "BA"
     },
@@ -852,7 +857,7 @@
                 "ToDate": "2025-08-10T23:59:00-08:00"
             }
         },
-        "Name": "San Francisco International Airport",
+        "Name": "Garage G and BART/San Francisco International Airport",
         "Location": {
             "Longitude": "-122.391895",
             "Latitude": "37.616023"
