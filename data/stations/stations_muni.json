@@ -1032,10 +1032,7 @@
         "Url": "https://www.sfmta.com/14510",
         "StopType": "onstreetBus",
         "connections": [
-            "L",
-            "K",
-            "N",
-            "M"
+            "N"
         ],
         "operator": "SF"
     },
@@ -1058,10 +1055,7 @@
         "Url": "https://www.sfmta.com/14509",
         "StopType": "onstreetBus",
         "connections": [
-            "L",
-            "K",
-            "N",
-            "M"
+            "N"
         ],
         "operator": "SF"
     },
@@ -3704,7 +3698,6 @@
         "StopType": "onstreetBus",
         "connections": [
             "K",
-            "M",
             "J"
         ],
         "operator": "SF"
