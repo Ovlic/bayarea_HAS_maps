@@ -47,3 +47,5 @@ def get_operator(line:str):
         return "CE"
     if line == "CC": # Capitol Corridor
         return "AM"
+    if line == "SMART":
+        return "SA"
