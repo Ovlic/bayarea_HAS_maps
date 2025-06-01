@@ -33,10 +33,10 @@ def op_to_name(op):
         return "AC Transit"
     return op
 
-with open("stations_bart.json", "r") as f:
+with open("data/stations/stations_bart.json", "r") as f:
     old_bart_data = json.load(f)
 
-with open("stations_muni.json", "r") as f:
+with open("data/stations/stations_muni.json", "r") as f:
     old_muni_data = json.load(f)
 
 print(len(old_muni_data))
@@ -44,13 +44,13 @@ for station in old_muni_data:
     print(f"Hi {station['Name']}", end=" ")
     # print(station['Name'])
 
-with open("stations_ct.json", "r") as f:
+with open("data/stations/stations_ct.json", "r") as f:
     old_ct_data = json.load(f)
 
-with open("stations_vta.json", "r") as f:
+with open("data/stations/stations_vta.json", "r") as f:
     old_vta_data = json.load(f)
 
-with open("stations_sfo.json", "r") as f:
+with open("data/stations/stations_sfo.json", "r") as f:
     old_sfo_data = json.load(f)
 
 # Ignored lines (duplicate stations)
@@ -139,15 +139,15 @@ jdark = TileProvider(
 folium.TileLayer(jdark, show=False).add_to(m)
 
 # Load rail lines from file
-with open('train_bus/rail_lines.json', 'r') as f:
+with open('data/train_bus/rail_lines.json', 'r') as f:
     rail_lines = json.loads(f.read())
 
 # Load stations from file
-with open('train_bus/stations.json', 'r') as f:
+with open('data/train_bus/stations.json', 'r') as f:
     stations = json.loads(f.read())
 
 # Load colors from file
-with open('colors.json', 'r') as f:
+with open('data/colors.json', 'r') as f:
     colors = json.loads(f.read())
 
 
@@ -658,7 +658,7 @@ Draw(
 
 # Optionally, add z-indexing manually through the map options
 m.add_child(folium.LayerControl())
-filename = "map_new.html"
+filename = "local/map_new.html"
 print(f"Saving map as {filename}...")
 m.save(filename)
 print("Done!")
