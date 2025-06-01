@@ -9,3 +9,6 @@ local/
 
 # QGIS files
 data/qgis_track_data/
+
+# MacOS
+.DS_Store
