@@ -163,7 +163,7 @@ if __name__ == "__main__":
 
 
     for line_id in data["BA"]:
-        if "-S" in line_id: continue
+        if "-S" in line_id: continue # Bart has two lines, one for each direction. We only need one since the actual line and stations are the same for both.
         for station in data['BA'][line_id]["Contents"]["dataObjects"]["ScheduledStopPoint"]:
             # is station already in old_bart_data?
             if any(station["id"] == old_station["id"] for old_station in old_bart_data):
