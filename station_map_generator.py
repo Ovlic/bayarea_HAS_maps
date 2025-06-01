@@ -31,29 +31,29 @@ def op_to_name(op):
     return op
 
 # Load colors from file
-with open('colors.json', 'r') as f:
+with open('data/colors.json', 'r') as f:
     colors = json.loads(f.read())
 
 # Load the data from the file
-path = 'train_bus/stations.json'
+path = 'data/train_bus/stations.json'
 print("Loading data from", path)
 with open(path) as f:
     data = json.load(f)
 print("Data loaded")
 
-with open("stations_bart.json", "r") as f:
+with open("data/stations/stations_bart.json", "r") as f:
     old_bart_data = json.load(f)
 
-with open("stations_muni.json", "r") as f:
+with open("data/stations/stations_muni.json", "r") as f:
     old_muni_data = json.load(f)
 
-with open("stations_ct.json", "r") as f:
+with open("data/stations/stations_ct.json", "r") as f:
     old_ct_data = json.load(f)
 
-with open("stations_vta.json", "r") as f:
+with open("data/stations/stations_vta.json", "r") as f:
     old_vta_data = json.load(f)
 
-with open("stations_sfo.json", "r") as f:
+with open("data/stations/stations_sfo.json", "r") as f:
     old_sfo_data = json.load(f)
 
 new_data = {}
@@ -75,21 +75,21 @@ print("Data restructured")
 
 # Load shapes from file
 print("Loading lines from file")
-with open('train_bus/shapes.json', 'r') as f:
+with open('data/train_bus/shapes.json', 'r') as f:
     shapes = json.loads(f.read())
 
-with open('train_bus/route_trip_ids.json', 'r') as f:
+with open('data/train_bus/route_trip_ids.json', 'r') as f:
     route_trip_ids = json.loads(f.read())
 
 # Draw lines from caltrain.geojson
-with open('caltrain.geojson', 'r') as f:
+with open('data/lines/caltrain.geojson', 'r') as f:
     caltrain_geojson = json.load(f)
 
 # Draw lines from filtered_muni_routes.geojson
-with open('filtered_muni_routes_bus.geojson', 'r') as f:
+with open('data/lines/filtered_muni_routes_bus.geojson', 'r') as f:
     muni_geojson = json.load(f)
 
-with open("ace.geojson", "r") as f:
+with open("data/lines/ace.geojson", "r") as f:
     ace_geojson = json.load(f)
 print("Lines loaded")
 
@@ -233,7 +233,7 @@ def add_stations(m, the_station):
                 html += "</p>"
 
                 p = folium.Popup(
-                    f"<p><b>Station</b>: {stop['Name']}</p><br style='content: \" \";'><p><b>Line</b>: {html}</p><br style='content: \" \";'><p><b>Operator</b>: {op_to_name(op)}</p><a target=\"_blank\" href='https://ovlic.com/bayarea_HAS_maps/maps/point_25_mile/{op}/{line_id}/{stop['id'].replace(' ', '_')}.html'><b>View Station Map</b></a>",
+                    f"<p><b>Station</b>: {stop['Name']}</p><br style='content: \" \";'><p><b>Line</b>: {html}</p><br style='content: \" \";'><p><b>Operator</b>: {op_to_name(op)}</p><p>Coords (debug): \"coords\": [{lat}, {lon}]</p><a target=\"_blank\" href='https://ovlic.com/bayarea_HAS_maps/maps/point_25_mile/{op}/{line_id}/{stop['id'].replace(' ', '_')}.html'><b>View Station Map</b></a>",
                     max_width=265
                 )
                 # p = folium.Popup(
@@ -263,11 +263,16 @@ def add_stations(m, the_station):
         lon = float(stop["Location"]["Longitude"])
         html = ""
         for connection in stop["connections"]:
-            html += f"""<span style="background-color: {colors["BA"][f'{connection}-N']}; color: {"white" if connection == "Red" else "black"}";>{connection}</span>, """
+            try:
+                the_color = colors["BA"][f'{connection}-N']
+            except KeyError:
+                # Default value (blue)
+                the_color = "#0000ff"
+            html += f"""<span style="background-color: {the_color}; color: {"white" if connection == "Red" else "black"}";>{connection}</span>, """
         html = html[:-2]
 
         p = folium.Popup(
-            f"<p><b>Station</b>: {stop['Name']}</p><br style='content: \" \";'><p><b>Line{'s' if len(stop['connections'])>1 else ''}</b>: {html}</p><br style='content: \" \";'><p><b>Operator</b>: {op_to_name(stop['operator'])}</p><a target=\"_blank\" href='https://ovlic.com/bayarea_HAS_maps/maps/point_25_mile/{stop['operator']}/{stop['connections'][0].replace(' ', '')}/{stop['id'].replace(' ', '_')}.html'><b>View Station Map</b></a>",
+            f"<p><b>Station</b>: {stop['Name']}</p><br style='content: \" \";'><p><b>Line{'s' if len(stop['connections'])>1 else ''}</b>: {html}</p><br style='content: \" \";'><p><b>Operator</b>: {op_to_name(stop['operator'])}</p><p>Coords (debug): \"coords\": [{lat}, {lon}]</p><a target=\"_blank\" href='https://ovlic.com/bayarea_HAS_maps/maps/point_25_mile/{stop['operator']}/{stop['connections'][0].replace(' ', '')}/{stop['id'].replace(' ', '_')}.html'><b>View Station Map</b></a>",
             max_width=265
         )
 
@@ -299,7 +304,7 @@ def add_stations(m, the_station):
         html = html[:-2]
 
         p = folium.Popup(
-            f"<p><b>Station</b>: {stop['Name']}</p><br style='content: \" \";'><p><b>Line{'s' if len(stop['connections'])>1 else ''}</b>: {html}</p><br style='content: \" \";'><p><b>Operator</b>: {op_to_name(stop['operator'])}</p><a target=\"_blank\" href='https://ovlic.com/bayarea_HAS_maps/maps/point_25_mile/{stop['operator']}/{stop['connections'][0].replace(' ', '')}/{stop['id'].replace(' ', '_')}.html'><b>View Station Map</b></a>",
+            f"<p><b>Station</b>: {stop['Name']}</p><br style='content: \" \";'><p><b>Line{'s' if len(stop['connections'])>1 else ''}</b>: {html}</p><br style='content: \" \";'><p><b>Operator</b>: {op_to_name(stop['operator'])}</p><p>Coords (debug): \"coords\": [{lat}, {lon}]</p><a target=\"_blank\" href='https://ovlic.com/bayarea_HAS_maps/maps/point_25_mile/{stop['operator']}/{stop['connections'][0].replace(' ', '')}/{stop['id'].replace(' ', '_')}.html'><b>View Station Map</b></a>",
             max_width=265
         )
 
@@ -326,10 +331,15 @@ def add_stations(m, the_station):
         lon = float(stop["Location"]["Longitude"])
         html = f""
         for connection in stop["connections"]:
-            html += f"""<span style="background-color: {colors["CT"][connection]}; color: {"white" if connection in ["Express"] else "black"}";>{connection.replace("Weekday", "WD").replace("Weekend", "WE")}</span>, """
+            try:
+                the_color = colors["CT"][f'{connection}-N']
+            except KeyError:
+                # Default value (blue)
+                the_color = "#0000ff"
+            html += f"""<span style="background-color: {the_color}; color: {"white" if connection in ["Express"] else "black"}";>{connection.replace("Weekday", "WD").replace("Weekend", "WE")}</span>, """
         html = html[:-2]
         p = folium.Popup(
-            f"<p><b>Station</b>: {stop['Name']}</p><br style='content: \" \";'><p><b>Line{'s' if len(stop['connections'])>1 else ''}</b>: {html}</p><br style='content: \" \";'><p><b>Operator</b>: {op_to_name(stop['operator'])}</p><a target=\"_blank\" href='https://ovlic.com/bayarea_HAS_maps/maps/point_25_mile/{stop['operator']}/{stop['connections'][0].replace(' ', '')}/{stop['id'].replace(' ', '_')}.html'><b>View Station Map</b></a>",
+            f"<p><b>Station</b>: {stop['Name']}</p><br style='content: \" \";'><p><b>Line{'s' if len(stop['connections'])>1 else ''}</b>: {html}</p><br style='content: \" \";'><p><b>Operator</b>: {op_to_name(stop['operator'])}</p><p>Coords (debug): \"coords\": [{lat}, {lon}]</p><a target=\"_blank\" href='https://ovlic.com/bayarea_HAS_maps/maps/point_25_mile/{stop['operator']}/{stop['connections'][0].replace(' ', '')}/{stop['id'].replace(' ', '_')}.html'><b>View Station Map</b></a>",
             max_width=265
         )
 
@@ -358,7 +368,7 @@ def add_stations(m, the_station):
         html = html[:-2]
 
         p = folium.Popup(
-            f"<p><b>Station</b>: {stop['Name']}</p><br style='content: \" \";'><p><b>Line{'s' if len(stop['connections'])>1 else ''}</b>: {html}</p><br style='content: \" \";'><p><b>Operator</b>: {op_to_name(stop['operator'])}</p><a target=\"_blank\" href='https://ovlic.com/bayarea_HAS_maps/maps/point_25_mile/{stop['operator']}/{stop['connections'][0].replace(' ', '')}/{stop['id'].replace(' ', '_')}.html'><b>View Station Map</b></a>",
+            f"<p><b>Station</b>: {stop['Name']}</p><br style='content: \" \";'><p><b>Line{'s' if len(stop['connections'])>1 else ''}</b>: {html}</p><br style='content: \" \";'><p><b>Operator</b>: {op_to_name(stop['operator'])}</p><p>Coords (debug): \"coords\": [{lat}, {lon}]</p><a target=\"_blank\" href='https://ovlic.com/bayarea_HAS_maps/maps/point_25_mile/{stop['operator']}/{stop['connections'][0].replace(' ', '')}/{stop['id'].replace(' ', '_')}.html'><b>View Station Map</b></a>",
             max_width=265
         )
 
@@ -384,11 +394,16 @@ def add_stations(m, the_station):
         lon = float(stop["Location"]["Longitude"])
         html = ""
         for connection in stop["connections"]:
-            html += f"""<span style="background-color: {colors["SI"][connection]}; color: {"white" if connection in ["Red Line"] else "black"}";>{connection}</span>, """
+            try:
+                the_color = colors["SI"][f'{connection}-N']
+            except KeyError:
+                # Default value (blue)
+                the_color = "#0000ff"
+            html += f"""<span style="background-color: {the_color}; color: {"white" if connection in ["Red Line"] else "black"}";>{connection}</span>, """
         html = html[:-2]
 
         p = folium.Popup(
-            f"<p><b>Station</b>: {stop['Name']}</p><br style='content: \" \";'><p><b>Line{'s' if len(stop['connections'])>1 else ''}</b>: {html}</p><br style='content: \" \";'><p><b>Operator</b>: {op_to_name(stop['operator'])}</p><a target=\"_blank\" href='https://ovlic.com/bayarea_HAS_maps/maps/point_25_mile/{stop['operator']}/{stop['connections'][0].replace(' ', '')}/{stop['id'].replace(' ', '_')}.html'><b>View Station Map</b></a>",
+            f"<p><b>Station</b>: {stop['Name']}</p><br style='content: \" \";'><p><b>Line{'s' if len(stop['connections'])>1 else ''}</b>: {html}</p><br style='content: \" \";'><p><b>Operator</b>: {op_to_name(stop['operator'])}</p><p>Coords (debug): \"coords\": [{lat}, {lon}]</p><a target=\"_blank\" href='https://ovlic.com/bayarea_HAS_maps/maps/point_25_mile/{stop['operator']}/{stop['connections'][0].replace(' ', '')}/{stop['id'].replace(' ', '_')}.html'><b>View Station Map</b></a>",
             max_width=265
         )
 
@@ -454,7 +469,7 @@ for operator, __data in new_data.items():
             html += "</p>"
 
             p = folium.Popup(
-                f"<p><b>Station</b>: {station['Name']}</p><br style='content: \" \";'><p><b>Line</b>: {html}</p><br style='content: \" \";'><p><b>Operator</b>: {op_to_name(operator)}</p><a target=\"_blank\" href='https://ovlic.com/bayarea_HAS_maps/maps/point_25_mile/{operator}/{line}/{station['id'].replace(' ', '_')}.html'><b>View Station Map</b></a>",
+                f"<p><b>Station</b>: {station['Name']}</p><br style='content: \" \";'><p><b>Line</b>: {html}</p><br style='content: \" \";'><p><b>Operator</b>: {op_to_name(operator)}</p><br style='content: \" \";'><p>Coords (debug): \"coords\": [{station['Location']['Latitude']}, {station['Location']['Longitude']}]</p><a target=\"_blank\" href='https://ovlic.com/bayarea_HAS_maps/maps/point_25_mile/{operator}/{line}/{station['id'].replace(' ', '_')}.html'><b>View Station Map</b></a>",
                 max_width=265
             )
             folium.Marker(
@@ -506,7 +521,14 @@ for operator, __data in new_data.items():
             if not os.path.exists(f"maps/point_25_mile/{operator}/{line.replace(' ', '')}"):
                 os.mkdir(f"maps/point_25_mile/{operator}/{line.replace(' ', '')}")
 
-            m.save(f"maps/point_25_mile/{operator}/{line.replace(" ", "")}/{filename}")
-            # break
-        # break
-    # break
+            # m.save(f"maps/point_25_mile/{operator}/{line.replace(" ", "")}/{filename}")
+
+            m.add_child(
+                folium.ClickForMarker("\"coords\": [${lat}, ${lng}]")
+            )
+
+            m.save("local/station_map.html")
+            print()
+            break
+        break
+    break
