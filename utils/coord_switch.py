@@ -38,14 +38,15 @@ if __name__ == "__main__":
         
         print("Done")
         """
+    files = ["blue_line.geojson", "red_line.geojson"]
+    for filename in files:
+        with open(f"data/qgis_track_data/sfo/{filename}") as f:
+            geojson = json.load(f)
 
-    with open("data/lines/ace.geojson") as f:
-        geojson = json.load(f)
+        updated_geojson = switch_coords(geojson)
 
-    updated_geojson = switch_coords(geojson)
-
-    with open("data/track_data/ace.geojson", "w") as f:
-        json.dump(updated_geojson, f)
+        with open(f"data/track_data/sfo/{filename}", "w") as f:
+            json.dump(updated_geojson, f)
     
     # """
     
