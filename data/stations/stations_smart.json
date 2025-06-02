@@ -1,419 +1,600 @@
 [
     {
-      "id": "71092",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7109",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Cotati",
-      "Location": { "Longitude": "-122.691054151", "Latitude": "38.330935699" },
-      "Url": "https://www.sonomamarintrain.org/stations/COT",
-      "StopType": "other"
+        "id": "71092",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7109",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Cotati",
+        "Location": {
+            "Longitude": "-122.691054151",
+            "Latitude": "38.330935699"
+        },
+        "Url": "https://www.sonomamarintrain.org/stations/COT",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71091",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7109",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Cotati",
-      "Location": { "Longitude": "-122.690985057", "Latitude": "38.331074425" },
-      "Url": "https://www.sonomamarintrain.org/stations/COT",
-      "StopType": "other"
+        "id": "71091",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7109",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Cotati",
+        "Location": {
+            "Longitude": "-122.690985057",
+            "Latitude": "38.331074425"
+        },
+        "Url": "https://www.sonomamarintrain.org/stations/COT",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71012",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7101",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Larkspur",
-      "Location": { "Longitude": "-122.512488322", "Latitude": "37.947804843" },
-      "Url": "https://sonomamarintrain.org/stations/LAR",
-      "StopType": "other"
+        "id": "71012",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7101",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Larkspur",
+        "Location": {
+            "Longitude": "-122.512488322",
+            "Latitude": "37.947804843"
+        },
+        "Url": "https://sonomamarintrain.org/stations/LAR",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71011",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7101",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Larkspur",
-      "Location": { "Longitude": "-122.512482504", "Latitude": "37.947812834" },
-      "Url": "https://sonomamarintrain.org/stations/LAR",
-      "StopType": "other"
+        "id": "71011",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7101",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Larkspur",
+        "Location": {
+            "Longitude": "-122.512482504",
+            "Latitude": "37.947812834"
+        },
+        "Url": "https://sonomamarintrain.org/stations/LAR",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71031",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7103",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Marin Civic Center",
-      "Location": { "Longitude": "-122.537755576", "Latitude": "38.001247404" },
-      "Url": "https://www.sonomamarintrain.org/stations/MCC",
-      "StopType": "other"
+        "id": "71031",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7103",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Marin Civic Center",
+        "Location": {
+            "Longitude": "-122.537755576",
+            "Latitude": "38.001247404"
+        },
+        "Url": "https://www.sonomamarintrain.org/stations/MCC",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71032",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7103",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Marin Civic Center",
-      "Location": { "Longitude": "-122.537763819", "Latitude": "38.00123963" },
-      "Url": "https://www.sonomamarintrain.org/stations/MCC",
-      "StopType": "other"
+        "id": "71032",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7103",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Marin Civic Center",
+        "Location": {
+            "Longitude": "-122.537763819",
+            "Latitude": "38.00123963"
+        },
+        "Url": "https://www.sonomamarintrain.org/stations/MCC",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71051",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7105",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Novato Downtown",
-      "Location": { "Longitude": "-122.564439887", "Latitude": "38.105989951" },
-      "Url": "https://www.sonomamarintrain.org/node/57",
-      "StopType": "other"
+        "id": "71051",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7105",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Novato Downtown",
+        "Location": {
+            "Longitude": "-122.564439887",
+            "Latitude": "38.105989951"
+        },
+        "Url": "https://www.sonomamarintrain.org/node/57",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71052",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7105",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Novato Downtown",
-      "Location": { "Longitude": "-122.564435385", "Latitude": "38.105984503" },
-      "Url": "https://www.sonomamarintrain.org/node/57",
-      "StopType": "other"
+        "id": "71052",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7105",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Novato Downtown",
+        "Location": {
+            "Longitude": "-122.564435385",
+            "Latitude": "38.105984503"
+        },
+        "Url": "https://www.sonomamarintrain.org/node/57",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71041",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7104",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Novato Hamilton",
-      "Location": { "Longitude": "-122.523876228", "Latitude": "38.056289119" },
-      "Url": "https://www.sonomamarintrain.org/stations/HAM",
-      "StopType": "other"
+        "id": "71041",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7104",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Novato Hamilton",
+        "Location": {
+            "Longitude": "-122.523876228",
+            "Latitude": "38.056289119"
+        },
+        "Url": "https://www.sonomamarintrain.org/stations/HAM",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71042",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7104",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Novato Hamilton",
-      "Location": { "Longitude": "-122.52387291", "Latitude": "38.056281657" },
-      "Url": "https://www.sonomamarintrain.org/stations/HAM",
-      "StopType": "other"
+        "id": "71042",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7104",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Novato Hamilton",
+        "Location": {
+            "Longitude": "-122.52387291",
+            "Latitude": "38.056281657"
+        },
+        "Url": "https://www.sonomamarintrain.org/stations/HAM",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71062",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7106",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Novato San Marin",
-      "Location": { "Longitude": "-122.566061524", "Latitude": "38.120879687" },
-      "Url": "https://www.sonomamarintrain.org/stations/NSM",
-      "StopType": "other"
+        "id": "71062",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7106",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Novato San Marin",
+        "Location": {
+            "Longitude": "-122.566061524",
+            "Latitude": "38.120879687"
+        },
+        "Url": "https://www.sonomamarintrain.org/stations/NSM",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71061",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7106",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Novato San Marin",
-      "Location": { "Longitude": "-122.566055903", "Latitude": "38.120917089" },
-      "Url": "https://www.sonomamarintrain.org/stations/NSM",
-      "StopType": "other"
+        "id": "71061",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7106",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Novato San Marin",
+        "Location": {
+            "Longitude": "-122.566055903",
+            "Latitude": "38.120917089"
+        },
+        "Url": "https://www.sonomamarintrain.org/stations/NSM",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71072",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7107",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Petaluma Downtown",
-      "Location": { "Longitude": "-122.634812404", "Latitude": "38.237255578" },
-      "Url": "https://www.sonomamarintrain.org/stations/PET",
-      "StopType": "other"
+        "id": "71072",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7107",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Petaluma Downtown",
+        "Location": {
+            "Longitude": "-122.634812404",
+            "Latitude": "38.237255578"
+        },
+        "Url": "https://www.sonomamarintrain.org/stations/PET",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71071",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7107",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Petaluma Downtown",
-      "Location": { "Longitude": "-122.634825405", "Latitude": "38.237263138" },
-      "Url": "https://www.sonomamarintrain.org/stations/PET",
-      "StopType": "other"
+        "id": "71071",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7107",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Petaluma Downtown",
+        "Location": {
+            "Longitude": "-122.634825405",
+            "Latitude": "38.237263138"
+        },
+        "Url": "https://www.sonomamarintrain.org/stations/PET",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71082",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7108",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Petaluma North",
-      "Location": { "Longitude": "-122.6549455147", "Latitude": "38.2669483579" },
-      "Url": null,
-      "StopType": "other"
+        "id": "71082",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7108",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Petaluma North",
+        "Location": {
+            "Longitude": "-122.6549455147",
+            "Latitude": "38.2669483579"
+        },
+        "Url": null,
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71081",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7108",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Petaluma North",
-      "Location": { "Longitude": "-122.6549584963", "Latitude": "38.2669235792" },
-      "Url": null,
-      "StopType": "other"
+        "id": "71081",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7108",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Petaluma North",
+        "Location": {
+            "Longitude": "-122.6549584963",
+            "Latitude": "38.2669235792"
+        },
+        "Url": null,
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71102",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7110",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Rohnert Park",
-      "Location": { "Longitude": "-122.701030452", "Latitude": "38.34709719" },
-      "Url": "https://www.sonomamarintrain.org/stations/RPK",
-      "StopType": "other"
+        "id": "71102",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7110",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Rohnert Park",
+        "Location": {
+            "Longitude": "-122.701030452",
+            "Latitude": "38.34709719"
+        },
+        "Url": "https://www.sonomamarintrain.org/stations/RPK",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71101",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7110",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Rohnert Park",
-      "Location": { "Longitude": "-122.701041055", "Latitude": "38.34711437" },
-      "Url": "https://www.sonomamarintrain.org/stations/RPK",
-      "StopType": "other"
+        "id": "71101",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7110",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Rohnert Park",
+        "Location": {
+            "Longitude": "-122.701041055",
+            "Latitude": "38.34711437"
+        },
+        "Url": "https://www.sonomamarintrain.org/stations/RPK",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71022",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7102",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART San Rafael",
-      "Location": { "Longitude": "-122.5228", "Latitude": "37.971995" },
-      "Url": "https://www.sonomamarintrain.org/stations/DSR",
-      "StopType": "other"
+        "id": "71022",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7102",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART San Rafael",
+        "Location": {
+            "Longitude": "-122.5228",
+            "Latitude": "37.971995"
+        },
+        "Url": "https://www.sonomamarintrain.org/stations/DSR",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71021",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7102",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART San Rafael",
-      "Location": { "Longitude": "-122.522665", "Latitude": "37.971973" },
-      "Url": "https://www.sonomamarintrain.org/stations/DSR",
-      "StopType": "other"
+        "id": "71021",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7102",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART San Rafael",
+        "Location": {
+            "Longitude": "-122.522665",
+            "Latitude": "37.971973"
+        },
+        "Url": "https://www.sonomamarintrain.org/stations/DSR",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71112",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7111",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Santa Rosa Downtown",
-      "Location": { "Longitude": "-122.72176762", "Latitude": "38.437582814" },
-      "Url": "https://www.sonomamarintrain.org/stations/SRD",
-      "StopType": "other"
+        "id": "71112",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7111",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Santa Rosa Downtown",
+        "Location": {
+            "Longitude": "-122.72176762",
+            "Latitude": "38.437582814"
+        },
+        "Url": "https://www.sonomamarintrain.org/stations/SRD",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71111",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7111",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Santa Rosa Downtown",
-      "Location": { "Longitude": "-122.721762602", "Latitude": "38.437584032" },
-      "Url": "https://www.sonomamarintrain.org/stations/SRD",
-      "StopType": "other"
+        "id": "71111",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7111",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Santa Rosa Downtown",
+        "Location": {
+            "Longitude": "-122.721762602",
+            "Latitude": "38.437584032"
+        },
+        "Url": "https://www.sonomamarintrain.org/stations/SRD",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71122",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7112",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Santa Rosa North",
-      "Location": { "Longitude": "-122.73645045", "Latitude": "38.455219791" },
-      "Url": "https://www.sonomamarintrain.org/stations/SRN",
-      "StopType": "other"
+        "id": "71122",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7112",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Santa Rosa North",
+        "Location": {
+            "Longitude": "-122.73645045",
+            "Latitude": "38.455219791"
+        },
+        "Url": "https://www.sonomamarintrain.org/stations/SRN",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71121",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7112",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "SMART Santa Rosa North",
-      "Location": { "Longitude": "-122.736446933", "Latitude": "38.455221589" },
-      "Url": "https://www.sonomamarintrain.org/stations/SRN",
-      "StopType": "other"
+        "id": "71121",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7112",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "SMART Santa Rosa North",
+        "Location": {
+            "Longitude": "-122.736446933",
+            "Latitude": "38.455221589"
+        },
+        "Url": "https://www.sonomamarintrain.org/stations/SRN",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71132",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7113",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "Sonoma County Airport SMART",
-      "Location": { "Longitude": "-122.7840807617", "Latitude": "38.5098174161" },
-      "Url": "https://www.sonomamarintrain.org/stations/SCA",
-      "StopType": "other"
+        "id": "71132",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7113",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "Sonoma County Airport SMART",
+        "Location": {
+            "Longitude": "-122.7840807617",
+            "Latitude": "38.5098174161"
+        },
+        "Url": "https://www.sonomamarintrain.org/stations/SCA",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     },
     {
-      "id": "71131",
-      "Extensions": {
-        "LocationType": "0",
-        "PlatformCode": null,
-        "ParentStation": "7113",
-        "ValidBetween": {
-          "FromDate": "2025-01-10T00:00:00-08:00",
-          "ToDate": "2025-08-08T23:59:00-08:00"
-        }
-      },
-      "Name": "Sonoma County Airport SMART",
-      "Location": { "Longitude": "-122.7840847134", "Latitude": "38.5098213265" },
-      "Url": "https://www.sonomamarintrain.org/stations/SCA",
-      "StopType": "other"
+        "id": "71131",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": "7113",
+            "ValidBetween": {
+                "FromDate": "2025-01-10T00:00:00-08:00",
+                "ToDate": "2025-08-08T23:59:00-08:00"
+            }
+        },
+        "Name": "Sonoma County Airport SMART",
+        "Location": {
+            "Longitude": "-122.7840847134",
+            "Latitude": "38.5098213265"
+        },
+        "Url": "https://www.sonomamarintrain.org/stations/SCA",
+        "StopType": "other",
+        "connections": [
+            "SMART"
+        ],
+        "operator": "SA"
     }
-  ]
-  
+]
