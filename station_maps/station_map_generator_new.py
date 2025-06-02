@@ -226,7 +226,7 @@ with open("data/stations/stations_vta.json", "r") as f:
 with open("data/stations/stations_sfo.json", "r") as f:
     old_sfo_data = json.load(f)
 
-with open('data/stations/stations_smartNEW.json', 'r') as f:
+with open('data/stations/stations_smart.json', 'r') as f:
     old_smart_data = json.load(f)
 
 # Consolidate data into a single dictionary

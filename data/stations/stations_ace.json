@@ -1,0 +1,234 @@
+[
+    {
+        "id": "73368",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": null,
+            "ValidBetween": {
+                "FromDate": "2024-11-18T00:00:00-08:00",
+                "ToDate": "2026-01-03T23:59:00-08:00"
+            }
+        },
+        "Name": "Fremont",
+        "Location": {
+            "Longitude": "-122.007353",
+            "Latitude": "37.559114"
+        },
+        "Url": "https://acerail.com/stations/#3423",
+        "StopType": "onstreetBus",
+        "connections": [
+            "ACETrain",
+            "CC"
+        ],
+        "operator": "CE"
+    },
+    {
+        "id": "73422",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": null,
+            "ValidBetween": {
+                "FromDate": "2024-11-18T00:00:00-08:00",
+                "ToDate": "2026-01-03T23:59:00-08:00"
+            }
+        },
+        "Name": "Great America Parkway",
+        "Location": {
+            "Longitude": "-121.967047",
+            "Latitude": "37.406833"
+        },
+        "Url": "https://acerail.com/stations/#3424",
+        "StopType": "onstreetBus",
+        "connections": [
+            "ACETrain",
+            "CC"
+        ],
+        "operator": "CE"
+    },
+    {
+        "id": "73586",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": null,
+            "ValidBetween": {
+                "FromDate": "2024-11-18T00:00:00-08:00",
+                "ToDate": "2026-01-03T23:59:00-08:00"
+            }
+        },
+        "Name": "Lathrop",
+        "Location": {
+            "Longitude": "-121.264143",
+            "Latitude": "37.79894"
+        },
+        "Url": "https://acerail.com/stations/#3415",
+        "StopType": "onstreetBus",
+        "connections": [
+            "ACETrain"
+        ],
+        "operator": "CE"
+    },
+    {
+        "id": "73548",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": null,
+            "ValidBetween": {
+                "FromDate": "2024-11-18T00:00:00-08:00",
+                "ToDate": "2026-01-03T23:59:00-08:00"
+            }
+        },
+        "Name": "Livermore",
+        "Location": {
+            "Longitude": "-121.766906",
+            "Latitude": "37.685045"
+        },
+        "Url": "https://acerail.com/stations/#3421",
+        "StopType": "onstreetBus",
+        "connections": [
+            "ACETrain"
+        ],
+        "operator": "CE"
+    },
+    {
+        "id": "73757",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": null,
+            "ValidBetween": {
+                "FromDate": "2024-11-18T00:00:00-08:00",
+                "ToDate": "2026-01-03T23:59:00-08:00"
+            }
+        },
+        "Name": "Pleasanton",
+        "Location": {
+            "Longitude": "-121.882229",
+            "Latitude": "37.658561"
+        },
+        "Url": "https://acerail.com/stations/#3422",
+        "StopType": "onstreetBus",
+        "connections": [
+            "ACETrain"
+        ],
+        "operator": "CE"
+    },
+    {
+        "id": "73752",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": null,
+            "ValidBetween": {
+                "FromDate": "2024-11-18T00:00:00-08:00",
+                "ToDate": "2026-01-03T23:59:00-08:00"
+            }
+        },
+        "Name": "San Jose",
+        "Location": {
+            "Longitude": "-121.902378",
+            "Latitude": "37.330686"
+        },
+        "Url": "https://acerail.com/stations/#3445",
+        "StopType": "onstreetBus",
+        "connections": [
+            "ACETrain"
+        ],
+        "operator": "CE"
+    },
+    {
+        "id": "73722",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": null,
+            "ValidBetween": {
+                "FromDate": "2024-11-18T00:00:00-08:00",
+                "ToDate": "2026-01-03T23:59:00-08:00"
+            }
+        },
+        "Name": "Santa Clara",
+        "Location": {
+            "Longitude": "-121.936312",
+            "Latitude": "37.353506"
+        },
+        "Url": "https://acerail.com/stations/#3441",
+        "StopType": "onstreetBus",
+        "connections": [
+            "ACETrain"
+        ],
+        "operator": "CE"
+    },
+    {
+        "id": "73758",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": null,
+            "ValidBetween": {
+                "FromDate": "2024-11-18T00:00:00-08:00",
+                "ToDate": "2026-01-03T23:59:00-08:00"
+            }
+        },
+        "Name": "Stockton- Robert J Cabral",
+        "Location": {
+            "Longitude": "-121.27888",
+            "Latitude": "37.95708"
+        },
+        "Url": "https://acerail.com/stations/#3411",
+        "StopType": "onstreetBus",
+        "connections": [
+            "ACETrain"
+        ],
+        "operator": "CE"
+    },
+    {
+        "id": "73872",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": null,
+            "ValidBetween": {
+                "FromDate": "2024-11-18T00:00:00-08:00",
+                "ToDate": "2026-01-03T23:59:00-08:00"
+            }
+        },
+        "Name": "Tracy",
+        "Location": {
+            "Longitude": "-121.432738",
+            "Latitude": "37.696419"
+        },
+        "Url": "https://acerail.com/stations/#3420",
+        "StopType": "onstreetBus",
+        "connections": [
+            "ACETrain"
+        ],
+        "operator": "CE"
+    },
+    {
+        "id": "73827",
+        "Extensions": {
+            "LocationType": "0",
+            "PlatformCode": null,
+            "ParentStation": null,
+            "ValidBetween": {
+                "FromDate": "2024-11-18T00:00:00-08:00",
+                "ToDate": "2026-01-03T23:59:00-08:00"
+            }
+        },
+        "Name": "Vasco Rd",
+        "Location": {
+            "Longitude": "-121.717655",
+            "Latitude": "37.697062"
+        },
+        "Url": "https://acerail.com/stations/#3419",
+        "StopType": "onstreetBus",
+        "connections": [
+            "ACETrain"
+        ],
+        "operator": "CE"
+    }
+]
