@@ -7,6 +7,9 @@ __pycache__/
 # Local folder for testing html
 local/
 
+# Zip files to transfer the data from machine to machine
+zips/
+
 # QGIS files
 data/qgis_track_data/
 
