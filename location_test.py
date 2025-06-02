@@ -1,6 +1,243 @@
 
 from folium import Element
 
+# Add multiple location circles
+'''def add_location_circles(m, radii):
+    # JavaScript to update multiple circles dynamically
+    js = """
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {{
+        var map = document.querySelector(".folium-map")._leaflet_map;
+
+        if (!window.userCircles) {{
+            window.userCircles = [];
+        }}
+
+        function updateCircles(e) {{
+            let radii = {radii};  // List of radii in meters
+            radii.forEach((radius, index) => {{
+                if (window.userCircles[index]) {{
+                    window.userCircles[index].setLatLng(e.latlng);
+                }} else {{
+                    window.userCircles[index] = L.circle(e.latlng, {{
+                        radius: radius,
+                        color: 'black',
+                        fillColor: 'blue',
+                        fillOpacity: 0.2
+                    }}).addTo(map);
+                    window.userCircles[index].bindPopup("Radius: " + radius + " meters");
+                }}
+            }});
+        }}
+
+        map.on("locationfound", updateCircles);
+    }});
+    </script>
+    """.format(radii=radii)
+
+    map_find_html = """
+    <script>
+    L.Map.addInitHook(function () {
+        this.getContainer()._leaflet_map = this;
+    });
+    </script>
+    """
+
+    # Add the map_find_html to the map
+    m.get_root().html.add_child(Element(map_find_html))
+    # Add the JS script to the map
+    m.get_root().html.add_child(Element(js))'''
+'''def add_location_circles(m, radii):
+    # JavaScript to update multiple circles dynamically with layer control
+    js = """
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {{
+        var map = document.querySelector(".folium-map")._leaflet_map;
+
+        if (!window.userCircles) {{
+            window.userCircles = [];
+        }}
+
+        if (!window.circleLayers) {{
+            window.circleLayers = L.layerGroup().addTo(map);
+        }}
+
+        function updateCircles(e) {{
+            let radii = {radii};  // List of radii in meters
+            radii.forEach((radius, index) => {{
+                if (window.userCircles[index]) {{
+                    window.userCircles[index].setLatLng(e.latlng);
+                }} else {{
+                    let circle = L.circle(e.latlng, {{
+                        radius: radius,
+                        color: 'black',
+                        fillColor: 'blue',
+                        fillOpacity: 0.2
+                    }});
+
+                    circle.bindPopup("Radius: " + radius + " meters");
+                    window.userCircles[index] = circle;
+                    window.circleLayers.addLayer(circle);
+                }}
+            }});
+        }}
+
+        map.on("locationfound", updateCircles);
+
+        // Add Layer Control
+        var baseLayers = {{}};
+        var overlays = {{}};
+        
+        let radii = {radii};
+        radii.forEach((radius, index) => {{
+            overlays["Circle " + radius + "m"] = window.userCircles[index];
+        }});
+
+        L.control.layers(baseLayers, overlays, {{ collapsed: false }}).addTo(map);
+    }});
+    </script>
+    """.format(radii=radii)
+
+    map_find_html = """
+    <script>
+    L.Map.addInitHook(function () {
+        this.getContainer()._leaflet_map = this;
+    });
+    </script>
+    """
+
+    # Add the map_find_html to the map
+    m.get_root().html.add_child(Element(map_find_html))
+    # Add the JS script to the map
+    m.get_root().html.add_child(Element(js))'''
+
+def add_location_circles(m, radii):
+    # JavaScript to update multiple circles dynamically with layer control
+    js = """
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {{
+        var map = document.querySelector(".folium-map")._leaflet_map;
+
+        if (!window.userCircles) {{
+            window.userCircles = [];
+        }}
+
+        function updateCircles(e) {{
+            let radii = {radii};  // List of radii in meters
+            radii.forEach((radius, index) => {{
+                if (window.userCircles[index]) {{
+                    window.userCircles[index].setLatLng(e.latlng);
+                }} else {{
+                    let circle = L.circle(e.latlng, {{
+                        radius: radius,
+                        color: 'black',
+                        fillColor: 'blue',
+                        fillOpacity: 0.2
+                    }}).bindPopup("Radius: " + radius + " meters");
+
+                    window.userCircles[index] = circle;
+                }}
+            }});
+
+            // Update layer group with userCircles
+            if (window.circleLayerGroup) {{
+                window.circleLayerGroup.clearLayers();
+            }} else {{
+                window.circleLayerGroup = L.layerGroup(window.userCircles).addTo(map);
+            }}
+            window.userCircles.forEach(circle => window.circleLayerGroup.addLayer(circle));
+        }}
+
+        map.on("locationfound", updateCircles);
+
+        // Add Layer Control
+        var baseLayers = {{}};
+        var overlays = {{ "User Circles": window.circleLayerGroup }};
+        L.control.layers(baseLayers, overlays, {{ collapsed: false }}).addTo(map);
+    }});
+    </script>
+    """.format(radii=radii)
+
+    map_find_html = """
+    <script>
+    L.Map.addInitHook(function () {
+        this.getContainer()._leaflet_map = this;
+    });
+    </script>
+    """
+
+    # Add the map_find_html to the map
+    m.get_root().html.add_child(Element(map_find_html))
+    # Add the JS script to the map
+    m.get_root().html.add_child(Element(js))
+
+def add_location_circles2(m, radii, radii_text: list = None):
+    # JavaScript to update multiple circles dynamically with layer control
+    if radii_text is None:
+        radii_text = ["Radius: " + str(radius) + " meters" for radius in radii]
+    js = """
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {{
+        var map = document.querySelector(".folium-map")._leaflet_map;
+
+        if (!window.userCircles) {{
+            window.userCircles = [];
+        }}
+
+        if (!window.circleLayerGroup) {{
+            window.circleLayerGroup = L.layerGroup().addTo(map);
+            // Add custom attribute to the layer group
+            window.circleLayerGroup.layer_name = "User Circles";
+        }}
+
+        function updateCircles(e) {{
+            let radii = {radii};  // List of radii in meters
+            let radii_text = {radii_text};  // List of radius text for popups
+            radii.forEach((radius, index) => {{
+                if (window.userCircles[index]) {{
+                    window.userCircles[index].setLatLng(e.latlng);
+                }} else {{
+                    let circle = L.circle(e.latlng, {{
+                        radius: radius,
+                        color: 'black',
+                        fillColor: 'blue',
+                        fillOpacity: 0.2
+                    }}).bindPopup(radii_text[index]);
+                    // Add custom attribute to the circle
+                    circle.circle_no = index;
+
+                    window.userCircles[index] = circle;
+                    window.circleLayerGroup.addLayer(circle);
+                }}
+            }});
+        }}
+
+        map.on("locationfound", updateCircles);
+
+        // Add Layer Control
+        //var baseLayers = {{}};
+        //var overlays = {{ "User Circles": window.circleLayerGroup }};
+        //L.control.layers(baseLayers, overlays, {{ collapsed: false }}).addTo(map);
+    }});
+    </script>
+    """.format(radii=radii, radii_text=radii_text)
+
+    map_find_html = """
+    <script>
+    L.Map.addInitHook(function () {
+        this.getContainer()._leaflet_map = this;
+    });
+    </script>
+    """
+
+    # Add the map_find_html to the map
+    m.get_root().html.add_child(Element(map_find_html))
+    # Add the JS script to the map
+    m.get_root().html.add_child(Element(js))
+
+
+
+
 def add_location_circle2(m, radius, popup_str, circle_no: int = 1):
     # JavaScript to update the circle dynamically
     js = """
@@ -203,5 +440,4 @@ if __name__ == "__main__":
 
     # Show the map
     m.save("location_test.html")
-
 
