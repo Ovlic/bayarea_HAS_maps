@@ -236,7 +236,8 @@ def add_location_circles2(m, radii, radii_text: list = None):
     m.get_root().html.add_child(Element(js))
 
 
-
+# TODO: Move add_location_circle2 into transit_map.py and move this file into folium_maps/
+# TODO: This file is a mess lol
 
 def add_location_circle2(m, radius, popup_str, circle_no: int = 1):
     # JavaScript to update the circle dynamically
