@@ -2,6 +2,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     var map = document.querySelector(".folium-map")._leaflet_map;
 
+    
+
     // Loop through layers and add to the appropriate object
     
     var bart_lines = {};
@@ -15,6 +17,37 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var overlay_layers_temp = {};
 
+    // Add marker to overlay_layers_temp
+    function add_station(marker, operator, line){
+        if (overlay_layers_temp.hasOwnProperty(operator)) {
+            if (overlay_layers_temp[operator].lines.hasOwnProperty(line)) {
+                overlay_layers_temp[operator].lines[line].stations.push(marker);
+            } else {
+                overlay_layers_temp[operator].lines[line] = {layers: [], stations: [marker]};
+            }
+        } else {
+            overlay_layers_temp[operator] = {lines: {}};
+            overlay_layers_temp[operator].lines[line] = {layers: [], stations: [marker]};
+        }
+    }
+
+    // Add line to overlay_layers_temp
+    function add_layer(polyline, operator, line){
+        if (overlay_layers_temp.hasOwnProperty(operator)) {
+            if (overlay_layers_temp[operator].lines.hasOwnProperty(line)) {
+                overlay_layers_temp[operator].lines[line].layers.push(polyline);
+            } else {
+                overlay_layers_temp[operator].lines[line] = {layers: [polyline], stations: []};
+            }
+        } else {
+            overlay_layers_temp[operator] = {lines: {}};
+            overlay_layers_temp[operator].lines[line] = {layers: [polyline], stations: []};
+        }
+
+        console.log("Added layer: "+line+" to "+operator);
+    }
+
+
     var muni_names = ["MUNI 038R", "MUNI F", "MUNI J", "MUNI K", "MUNI L", "MUNI M", "MUNI N", "MUNI T", "MUNI Powell-Hyde Cable Car", "MUNI Powell-Mason Cable Car", "MUNI California Cable Car"];
     var commuter_names = ["Caltrain", "ACE"];
     var border_names = ["San Francisco County Boundary"];
@@ -25,9 +58,6 @@ document.addEventListener("DOMContentLoaded", function() {
     map.eachLayer(function(layer) {
         if (layer instanceof L.Marker){
             // It's probably a station marker
-            // if (Object.hasOwn(layer, "name")){
-            //     console.log("Marker: "+layer.name);
-            // }
             // add to the station_markers_temp object
             // Check if the line is in the station_markers_temp object
             // If it is, append the station to the list
@@ -38,97 +68,99 @@ document.addEventListener("DOMContentLoaded", function() {
             } else {
                 station_markers_temp[layer.line] = [layer];
             }
-            // Add to overlay_layers_temp
-            if (overlay_layers_temp.hasOwnProperty(layer.operator)) {
-                if (overlay_layers_temp[layer.operator].lines.hasOwnProperty(layer.line)) {
-                    overlay_layers_temp[layer.operator].lines[layer.line].stations.push(layer);
-                }
-                else {
-                    overlay_layers_temp[layer.operator].lines[layer.line] = {layers: [], stations: [layer]};
-                }
-            } else {
-                overlay_layers_temp[layer.operator] = {lines: {}};
-                overlay_layers_temp[layer.operator].lines[layer.line] = {layers: [], stations: [layer]};
-            }
+
+            
+            add_station(layer, layer.operator, layer.line);
 
         } else if (layer instanceof L.Polyline){
+            // console.log("Polyline");
             // It's probably a transit line
             // Check the tooltip (after removing all the spaces, <div>, </div>, and \n) and see if it's in the list of names: "MUNI 038R", "MUNI F", "MUNI J", "MUNI K", "MUNI L", "MUNI M", "MUNI N", "MUNI T", "MUNI Powell-Hyde Cable Car", "MUNI Powell-Mason Cable Car", "MUNI California Cable Car", "BART Blue-N", "BART Blue-S", "BART Green-N", "BART Green-S", "BART Orange-N", "BART Orange-S", "BART Red-N", "BART Red-S", "BART Yellow-N", "BART Yellow-S", "BART Beige-N", "BART Beige-S", "Caltrain", "Caltrain South County", "VTA Blue Line", "VTA Green Line", "VTA Orange Line", "ACE"
             // If it is, append it to the appropriate list
             // If it isn't, append it to the other_layers list
-            var route_names = ["MUNI 038R", "MUNI F", "MUNI J", "MUNI K", "MUNI L", "MUNI M", "MUNI N", "MUNI T", "MUNI Powell-Hyde Cable Car", "MUNI Powell-Mason Cable Car", "MUNI California Cable Car", "BART Blue-N", "BART Blue-S", "BART Green-N", "BART Green-S", "BART Orange-N", "BART Orange-S", "BART Red-N", "BART Red-S", "BART Yellow-N", "BART Yellow-S", "BART Beige-N", "BART Beige-S", "Caltrain", "Caltrain South County", "VTA Blue Line", "VTA Green Line", "VTA Orange Line", "ACE"];
-            // Check the tooltip of the layer
-            if (layer.getTooltip() == null) {
+            var route_names = ["Muni 038R", "Muni F", "Muni J", "Muni K", "Muni L", "Muni M", "Muni N", "Muni T", "Muni Powell-Hyde Cable Car", "Muni Powell-Mason Cable Car", "Muni California Cable Car", "BART Blue-N", "BART Blue-S", "BART Green-N", "BART Green-S", "BART Orange-N", "BART Orange-S", "BART Red-N", "BART Red-S", "BART Yellow-N", "BART Yellow-S", "BART Beige-N", "BART Beige-S", "Caltrain", "Caltrain South County", "VTA Blue Line", "VTA Green Line", "VTA Orange Line", "ACE"];
+            
+            // Check to see if it has a name attribute
+            if (layer.line) {
+                // console.log("Polyline has a name!")
+                var route_name = layer.operator + " " + layer.line;
+                // this if statement is temporary
+                if (route_names.includes(route_name) || true) {
+                    if (layer.operator == "SF") {
+                        if (muni_lines.hasOwnProperty(route_name)) {
+                            muni_lines[route_name].push(layer);
+                        } else {
+                            muni_lines[route_name] = [layer];
+                        }
+                        
+                        add_layer(layer, layer.operator, route_name);
+
+                        // muni_lines.push(layer);
+                    } else if (layer.operator == "BA") {
+                        if (bart_lines.hasOwnProperty(route_name)) {
+                            bart_lines[route_name].push(layer);
+                        } else {
+                            bart_lines[route_name] = [layer];
+                        }
+                        
+
+                        add_layer(layer, layer.operator, route_name);
+                    } else if (layer.operator == "CT" || layer.operator == "CE") {
+                        if (commuter_lines.hasOwnProperty(route_name)) {
+                            console.log("Commuter line exists: "+route_name);
+                            commuter_lines[route_name].push(layer);
+                        } else {
+                            commuter_lines[route_name] = [layer];
+                        }
+
+                        add_layer(layer, layer.operator, route_name);
+                    } else {
+                        // Add to the overlay_layers_temp object
+                        add_layer(layer, layer.operator, route_name);
+                    }
+                } else {
+                    other_layers.push({label: route_name, layer: layer});
+                }
+            } else if (layer.getTooltip() != null) {
+                console.log("Polyline has a tooltip!");
+                var route_name = layer.getTooltip().getContent().replace(/<div>|<\/div>|\n/g, "");
+                if (route_names.includes(route_name)) {
+                    if (route_name.includes("Muni")) {
+                        if (muni_lines.hasOwnProperty(route_name)) {
+                            muni_lines[route_name].push(layer);
+                        } else {
+                            muni_lines[route_name] = [layer];
+                        }
+                        
+                        add_layer(layer, layer.operator, route_name);
+                    } else if (route_name.includes("BART")) {
+                        if (bart_lines.hasOwnProperty(route_name)) {
+                            bart_lines[route_name].push(layer);
+                        } else {
+                            bart_lines[route_name] = [layer];
+                        }
+
+                        add_layer(layer, layer.operator, route_name);
+                    } else if (route_name.includes("Caltrain") || route_name.includes("ACE")) {
+                        if (commuter_lines.hasOwnProperty(route_name)) {
+                            // console.log("Commuter line exists: "+route_name);
+                            commuter_lines[route_name].push(layer);
+                        } else {
+                            commuter_lines[route_name] = [layer];
+                        }
+                        
+                        add_layer(layer, layer.operator, route_name);
+
+                    }
+                } else {
+                    other_layers.push({label: route_name, layer: layer});
+                }
+            } else {
                 // Add to the other_layers list
                 console.log("Layer has no tooltip");
                 //console.log(layer);
-                other_layers.push(layer);
-                return;
-            }
-            var route_name = layer.getTooltip().getContent().replace(/<div>|<\/div>|\n/g, "");
-            if (route_names.includes(route_name)) {
-                if (route_name.includes("MUNI")) {
-                    if (muni_lines.hasOwnProperty(route_name)) {
-                        muni_lines[route_name].push(layer);
-                    } else {
-                        muni_lines[route_name] = [layer];
-                    }
-                    // Add to overlay_layers_temp
-                    if (overlay_layers_temp.hasOwnProperty(layer.operator)) {
-                        if (overlay_layers_temp[layer.operator].lines.hasOwnProperty(route_name)) {
-                            overlay_layers_temp[layer.operator].lines[route_name].layers.push(layer);
-                        }
-                        else {
-                            overlay_layers_temp[layer.operator].lines[route_name] = {layers: [layer], stations: []};
-                        }
-                    } else {
-                        overlay_layers_temp[layer.operator] = {lines: {}};
-                        overlay_layers_temp[layer.operator].lines[route_name] = {layers: [layer], stations: []};
-                    }
-
-                    // muni_lines.push(layer);
-                } else if (route_name.includes("BART")) {
-                    if (bart_lines.hasOwnProperty(route_name)) {
-                        bart_lines[route_name].push(layer);
-                    } else {
-                        bart_lines[route_name] = [layer];
-                    }
-                    // Add to overlay_layers_temp
-                    if (overlay_layers_temp.hasOwnProperty(layer.operator)) {
-                        if (overlay_layers_temp[layer.operator].lines.hasOwnProperty(route_name)) {
-                            overlay_layers_temp[layer.operator].lines[route_name].layers.push(layer);
-                        }
-                        else {
-                            overlay_layers_temp[layer.operator].lines[route_name] = {layers: [layer], stations: []};
-                        }
-                    } else {
-                        overlay_layers_temp[layer.operator] = {lines: {}};
-                        overlay_layers_temp[layer.operator].lines[route_name] = {layers: [layer], stations: []};
-                    }
-                    //bart_lines.push(layer);
-                } else if (route_name.includes("Caltrain") || route_name.includes("ACE")) {
-                    if (commuter_lines.hasOwnProperty(route_name)) {
-                        console.log("Commuter line exists: "+route_name);
-                        commuter_lines[route_name].push(layer);
-                    } else {
-                        commuter_lines[route_name] = [layer];
-                    }
-                    // Add to overlay_layers_temp
-                    if (overlay_layers_temp.hasOwnProperty(layer.operator)) {
-                        if (overlay_layers_temp[layer.operator].lines.hasOwnProperty(route_name)) {
-                            overlay_layers_temp[layer.operator].lines[route_name].layers.push(layer);
-                        }
-                        else {
-                            overlay_layers_temp[layer.operator].lines[route_name] = {layers: [layer], stations: []};
-                        }
-                    } else {
-                        overlay_layers_temp[layer.operator] = {lines: {}};
-                        overlay_layers_temp[layer.operator].lines[route_name] = {layers: [layer], stations: []};
-                    }
-                    //commuter_lines.push(layer);
-                }
-            } else {
-                other_layers.push({label: route_name, layer: layer});
+                // other_layers.push(layer);
+                // return;
             }
         } else if (layer instanceof L.TileLayer){
             // Add to the base_layers list
@@ -305,6 +337,8 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         ]
     };*/
+    console.log("overlay_layers_temp");
+    console.log(overlay_layers_temp);
 
     var base_layers = {
         label: 'Base Layers',
@@ -349,68 +383,70 @@ document.addEventListener("DOMContentLoaded", function() {
         ]
     };
 
-    var treeControl = L.control.layers.tree(base_layers, overlay_layers, {
-        namedToggle: true,
-        selectorBack: false,
-        collapsed: false
-    })
-    treeControl.addTo(map).collapseTree().expandSelected();
-    console.log(muni_lines);
-    console.log(bart_lines);
-    console.log(commuter_lines);
-
-    // Convert overlay_layers_temp to an object that can be used by the LayerControl
-    // Format: Operator name -> Line name -> lines, stations
-    // console.log("Overlay Layers Temp");
-    // console.log(overlay_layers_temp);
-
-    // var overlay_layers = {
-    //     label: 'Overlay Layers',
-    //     selectAllCheckbox: 'Un/select all',
-    //     children: []
-    // };
-    // // Combine all stations into a layer group and all line layers into another layer group
-    // for (var key in overlay_layers_temp) {
-    //     var operator = overlay_layers_temp[key];
-    //     var operator_lines = [];
-    //     for (var line in operator.lines) {
-    //         var line_obj = operator.lines[line];
-    //         var line_layers = line_obj.layers;
-    //         var line_stations = line_obj.stations;
-    //         var new_line_layers = L.layerGroup(line_layers);
-    //         var new_line_stations = L.layerGroup(line_stations);
-
-    //         operator_lines.push({
-    //             label: line,
-    //             selectAllCheckbox: true,
-    //             collapsed: true,
-    //             children: [
-    //                 {
-    //                     label: 'Lines',
-    //                     selectAllCheckbox: true,
-    //                     collapsed: true,
-    //                     layer: new_line_layers
-    //                 },
-    //                 {
-    //                     label: 'Stations',
-    //                     selectAllCheckbox: true,
-    //                     collapsed: true,
-    //                     layer: new_line_stations
-    //                 }
-    //             ]
-    //         });
-    //     }
-    //     overlay_layers.children.push({label: key, children: operator_lines});
-    // }
-    // // Add other_layers
-    // overlay_layers.children.push({label: 'Other', children: other_layers});
-
     // var treeControl = L.control.layers.tree(base_layers, overlay_layers, {
     //     namedToggle: true,
     //     selectorBack: false,
     //     collapsed: false
     // })
     // treeControl.addTo(map).collapseTree().expandSelected();
+    // console.log(muni_lines);
+    // console.log(bart_lines);
+    // console.log(commuter_lines);
+
+    // Convert overlay_layers_temp to an object that can be used by the LayerControl
+    // Format: Operator name -> Line name -> lines, stations
+    console.log("Overlay Layers Temp");
+    console.log(overlay_layers_temp);
+
+    var overlay_layers = {
+        label: 'Overlay Layers',
+        selectAllCheckbox: 'Un/select all',
+        children: []
+    };
+    var transit_layer = {label: 'Transit Lines', selectAllCheckbox: true, children: []};
+    // Combine all stations into a layer group and all line layers into another layer group
+    for (var key in overlay_layers_temp) {
+        var operator = overlay_layers_temp[key];
+        var operator_lines = [];
+        for (var line in operator.lines) {
+            var line_obj = operator.lines[line];
+            var line_layers = line_obj.layers;
+            var line_stations = line_obj.stations;
+            var new_line_layers = L.layerGroup(line_layers);
+            var new_line_stations = L.layerGroup(line_stations);
+
+            operator_lines.push({
+                label: line,
+                selectAllCheckbox: true,
+                collapsed: true,
+                children: [
+                    {
+                        label: 'Lines',
+                        // selectAllCheckbox: true,
+                        collapsed: true,
+                        layer: new_line_layers
+                    },
+                    {
+                        label: 'Stations',
+                        // selectAllCheckbox: true,
+                        collapsed: true,
+                        layer: new_line_stations
+                    }
+                ]
+            });
+        }
+        transit_layer.children.push({label: key, selectAllCheckbox: true, children: operator_lines});
+    }
+    overlay_layers.children.push(transit_layer);
+    // Add other_layers
+    overlay_layers.children.push({label: 'Other', children: other_layers});
+
+    var treeControl = L.control.layers.tree(base_layers, overlay_layers, {
+        namedToggle: true,
+        selectorBack: false,
+        collapsed: false
+    })
+    treeControl.addTo(map).collapseTree().expandSelected();
 
 
 });

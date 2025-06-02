@@ -1,36 +1,73 @@
-
 import folium, json
+from pprint import pprint
+
 import transit_map
-from location_test import add_location_circle2 as add_location_circle
+from location_test import (
+    add_location_circle2 as add_location_circle,
+    add_location_circles2 as add_location_circles,
+)
 from folium.plugins import LocateControl
 from folium import Element
+from folium.map import Layer
 
 from branca.element import Template, MacroElement
 
+# Load radar_script.js
+with open("radar_script.js", "r") as f:
+    radar_js = f.read()
 
 # Create a map centered at San Francisco
-m = folium.Map(
-    location=[37.7749, -122.4194],
-    zoom_start=12,
-    tiles='cartodbpositron'
-    )
+m = folium.Map(location=[37.7749, -122.4194], zoom_start=12, tiles="cartodbpositron")
 
 # Add other tile layers
 transit_map.add_tiles(m)
 
 # Add stations
-transit_map.add_stations(m)
+transit_map.add_stations(m, test=True)
 
 # Add lines
-transit_map.add_lines(m)
+transit_map.add_lines2(m)
 
 # Add the SF boundary
 transit_map.add_sf_boundary(m)
 
-# Add plugins
-transit_map.add_plugins(m)
+"""
+for(var key in map._layers){
+    let layer = map._layers[key]
+    if("_layers" in layer){
+        console.log("-----"+i.toString()+"------");
+        console.log(Object.keys(layer._layers).length);
+    }
+}
+"""
+
+# Print map layers
+# print(m._children)
+# layers = {}
+# for name, layer in m._children.items():
+#     try:
+#         if isinstance(layer, (folium.FeatureGroup, folium.TileLayer)):
+#             thename = layer.tile_name
+#         elif isinstance(layer, folium.PolyLine):
+#             thename = layer._name
+#         elif isinstance(layer, Layer):
+#             thename = layer.layer_name
+#         else:
+#             thename = layer.name
+#         # print([_name for _name, d in layer._children.items()])
+#         layers[thename] = layer
+#     except AttributeError:
+#         print(f"This layer does not have a name attribute")
+#         print(layer)
+# print("After loop")
+# pprint(layers)
+
+# # Add a string as an id for each layer (its just the key with no spaces)
+# for name, layer in layers.items():
+#     layer.layer_name = name.replace(" ", "")
 
 # Add custom location control
+
 
 def OLD_add_location_circle(m, radius):
     # Create a FeatureGroup in Python for the circle
@@ -86,24 +123,29 @@ def OLD_add_location_circle(m, radius):
 
     return location_layer  # Return the FeatureGroup for LayerControl
 
+
 # Distances (miles): 1/4, 1/2, 1, 3, 5, 7
 
 # Add LocateControl
-LocateControl(auto_start=True).add_to(m)
+LocateControl(
+    # auto_start=True
+).add_to(m)
 
-# 7 Miles
-add_location_circle(m, 11265.4, "7 Miles", 6)
+# Add all location circles
+add_location_circles(m, [402.336, 804.672, 1609.34, 4828.03, 8046.72, 11265.4])
+# # 7 Miles
+# add_location_circle(m, 11265.4, "7 Miles", 6)
 
-# 5 Miles
-add_location_circle(m, 8046.72, "5 Miles", 5)
-# 3 miles
-add_location_circle(m, 4828.03, "3 Miles", 4)
-# 1 mile
-add_location_circle(m, 1609.34, "1 Mile", 3)
-# 1/2 mile
-add_location_circle(m, 804.672, "1/2 Miles", 2)
-# 1/4 mile
-add_location_circle(m, 402.336, "1/4 Miles", 1)
+# # 5 Miles
+# add_location_circle(m, 8046.72, "5 Miles", 5)
+# # 3 miles
+# add_location_circle(m, 4828.03, "3 Miles", 4)
+# # 1 mile
+# add_location_circle(m, 1609.34, "1 Mile", 3)
+# # 1/2 mile
+# add_location_circle(m, 804.672, "1/2 Miles", 2)
+# # 1/4 mile
+# add_location_circle(m, 402.336, "1/4 Miles", 1)
 
 # # Add the location circle (1/4 mile radius)
 # add_location_circle(m, 402.336, "1/4 Miles", 1)
@@ -118,8 +160,6 @@ add_location_circle(m, 402.336, "1/4 Miles", 1)
 # # 7 miles
 # add_location_circle(m, 11265.4, "7 Miles", 6)
 
-# Add LayerControl to toggle the circle
-folium.LayerControl(collapsed=False).add_to(m)
 
 # Add custom text
 # Injecting custom css through branca macro elements and template, give it a name
@@ -204,8 +244,23 @@ my_custom_style._template = Template(textbox_css)
 # Adding my_custom_style to the map
 m.get_root().add_child(my_custom_style)
 
+# Add custom layer control to map
+layer_control_js = f"""
+    <script src="static/L.Control.Layers.Tree.js"></script>
+    <link rel="stylesheet" href="static/L.Control.Layers.Tree.css">
+
+    <script>
+    {radar_js}
+    </script>
+"""
+
+m.get_root().html.add_child(Element(layer_control_js))
+
+# Add plugins
+# transit_map.add_plugins(m)
+
 # Save the map
-m.save("radar.html")
+m.save("local/radarNew.html")
 
 # Add favicons
-transit_map.add_favicons("radar.html")
+# transit_map.add_favicons("local/radarNew.html")
